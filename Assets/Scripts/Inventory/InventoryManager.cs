@@ -12,6 +12,9 @@ public class InventoryManager : MonoBehaviour
     public Transform ItemContent;
     public GameObject InventoryItem;
 
+
+    public GameObject inventoryItemPrefab;
+
     public TMP_Text messageText;
     public Image itemImage;
 
@@ -21,6 +24,18 @@ public class InventoryManager : MonoBehaviour
 
     public ItemController[] InventoryItems;
 
+    public void PopulateInventory(List<Item> items)
+    {
+        foreach (var item in items)
+        {
+            GameObject inventoryItemGO = Instantiate(inventoryItemPrefab);
+            InventoryItemClickHandler itemClickHandler = inventoryItemGO.GetComponent<InventoryItemClickHandler>();
+
+            // Assign the corresponding Item object to the InventoryItemClickHandler
+            itemClickHandler.AssignItem(item);
+
+        }
+    }
     private void Awake()
     {
         Instance = this;
@@ -30,32 +45,33 @@ public class InventoryManager : MonoBehaviour
     {
         Items.Add(item);
         DisplayMessage("Obtained: " + item.itemName, item.itemImage, GetColorByItemClass(item));
-        ListItems();
+        ListItems(); // Updates the UI inventory
     }
 
     public void Remove(Item item)
     {
         Items.Remove(item);
+        ListItems();
     }
 
     public void ListItems()
     {
         foreach (Transform item in ItemContent)
         {
-            Destroy(item.gameObject);
+
         }
 
         foreach (var item in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
-            var itemImage = obj.transform.Find("ItemImage").GetComponent<Image>();
+            var itemName = obj.transform.Find("itemName").GetComponent<TMP_Text>();
+            var itemImage = obj.transform.Find("itemImage").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemImage.sprite = item.itemImage;
         }
 
-        SetInventoryItems();
+        //SetInventoryItems();
     }
 
     public void ShowItemPickupMessage(Item item)
@@ -101,7 +117,6 @@ public class InventoryManager : MonoBehaviour
         Color consumableColor = Color.green;
         Color keyItemColor = Color.magenta;
         Color questItemColor = Color.yellow;
-        Color specialRenderColor = Color.blue; // Adjust as needed
 
         // Assign colors based on item class
         if (item.consumable)
@@ -114,7 +129,7 @@ public class InventoryManager : MonoBehaviour
         return defaultColor; // Return default color if no class is matched
     }
 
-    public void SetInventoryItems()
+    /*public void SetInventoryItems()
     {
         InventoryItems = ItemContent.GetComponentsInChildren<ItemController>();
 
@@ -122,5 +137,5 @@ public class InventoryManager : MonoBehaviour
         {
             InventoryItems[i].AddItem(Items[i]);
         }
-    }
+    }*/
 }

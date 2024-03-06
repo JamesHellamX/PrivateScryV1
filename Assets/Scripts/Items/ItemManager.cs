@@ -21,14 +21,6 @@ public class ItemManager : MonoBehaviour
 
     }
 
-    // Function to add a specific item to the inventory
-    public void AddItemToInventory(Item item)
-    {
-        //ItemSelectors.Add(newItem);
-        Debug.Log("Item added to inventory");
-        inventoryManager.Add(item);
-    }
-
     // Function to use an item based on its ID
     public void UseItemByID(int itemID)
     {

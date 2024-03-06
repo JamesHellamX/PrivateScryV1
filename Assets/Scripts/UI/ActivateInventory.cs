@@ -18,11 +18,9 @@ public class ActivateInventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Debug.Log("Input recognised");
             if (Inventory.activeSelf)
             {
                 //if inventory is active, deactivate it
-                Debug.Log("Inventory is active, deactivating now");
                 Inventory.SetActive(false);
             }
             else
@@ -33,7 +31,7 @@ public class ActivateInventory : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+        /*if (Input.GetKeyDown(KeyCode.J))
         {
             Debug.Log("Input recognised");
             if (Journal.activeSelf)
@@ -45,6 +43,6 @@ public class ActivateInventory : MonoBehaviour
                 Debug.Log("Journal is inactive, activaing now");
                 Journal.SetActive(true);
             }
-        }
+        }*/
     }
 }

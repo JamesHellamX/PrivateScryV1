@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7568101846505241633}
   - component: {fileID: 4501574767690480849}
   - component: {fileID: 6269761005139440059}
-  - component: {fileID: 689380655703273819}
+  - component: {fileID: 3115082610377686265}
   m_Layer: 7
   m_Name: Energy Drink
   m_TagString: Untagged
@@ -150,7 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 22a40102aaf24574aad386d866d0f16a, type: 2}
---- !u!114 &689380655703273819
+  inventoryManager: {fileID: 0}
+--- !u!114 &3115082610377686265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,5 +165,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: 22a40102aaf24574aad386d866d0f16a, type: 2}
   playerTag: Player
-  PickupRange: 10
+  PickupRange: 40
   PR: {fileID: 0}

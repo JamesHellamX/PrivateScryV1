@@ -25,11 +25,10 @@ public class ItemPickup : MonoBehaviour
 
                 if (distanceToPlayer <= PickupRange)
                 {
+
                     if (Input.GetKeyDown(KeyCode.E))
                     {
 
-                        // Use the ItemManager to add the item to the inventory
-                        ItemManager.Instance.AddItemToInventory(Item);
                         Pickup();
 
                     }
@@ -42,11 +41,9 @@ public class ItemPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
             PlayerItemRange PR = other.GetComponent<PlayerItemRange>();
             if (PR != null)
             {
-
                 PR.ItemPickup();
 
             }
@@ -55,14 +52,12 @@ public class ItemPickup : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        Debug.Log("");
         PlayerItemRange PR = other.GetComponent<PlayerItemRange>();
         PR.ItemEnd();
     }
 
     void Pickup()
     {
-        Debug.Log("");
         InventoryManager.Instance.Add(Item);
         // Mark the item as picked up
         isPickedUp = true;
