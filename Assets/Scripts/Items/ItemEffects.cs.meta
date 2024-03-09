@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4c8322e1bfba8854781d2ab512441a49
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Journal: {instanceID: 0}
+  - SpectralKeyItem: {fileID: 1787867984158310554, guid: 6efed59f99de48541b7ccb869b6ef87d, type: 3}
+  - SpectralKeyButton: {instanceID: 0}
+  executionOrder: 100
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,7 +6,7 @@ using Unity.UI;
 public class ActivateInventory : MonoBehaviour
 {
     public GameObject Inventory;
-    public GameObject Journal;
+    //public GameObject Journal;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class ActivateInventory : MonoBehaviour
             else
             {
                 //activate it if not
-                Debug.Log("Inventory is inactive, activating now");
+                //Debug.Log("Inventory is inactive, activating now");
                 Inventory.SetActive(true);
             }
         }

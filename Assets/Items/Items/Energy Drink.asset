@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901d69990d847fb49bab19aa3963487a, type: 3}
   m_Name: Energy Drink
   m_EditorClassIdentifier: 
-  itemID: 3
+  itemID: 2
   itemName: Energy Drink
   itemImage: {fileID: 21300000, guid: f681dbb0de5c05e4c95bb53b1e6c9858, type: 3}
   itemDescription: A sealed can of energy drink. Theres a strange rattle when it

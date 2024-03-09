@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
+
+    // List to store items in the inventory
     public List<Item> Items = new List<Item>();
 
-    public Transform ItemContent;
     public GameObject InventoryItem;
-
-
-    public GameObject inventoryItemPrefab;
+    public Transform ItemContent;
 
     public TMP_Text messageText;
     public Image itemImage;
@@ -24,54 +23,69 @@ public class InventoryManager : MonoBehaviour
 
     public ItemController[] InventoryItems;
 
-    public void PopulateInventory(List<Item> items)
-    {
-        foreach (var item in items)
-        {
-            GameObject inventoryItemGO = Instantiate(inventoryItemPrefab);
-            InventoryItemClickHandler itemClickHandler = inventoryItemGO.GetComponent<InventoryItemClickHandler>();
-
-            // Assign the corresponding Item object to the InventoryItemClickHandler
-            itemClickHandler.AssignItem(item);
-
-        }
-    }
     private void Awake()
     {
         Instance = this;
     }
 
+
     public void Add(Item item)
     {
         Items.Add(item);
-        DisplayMessage("Obtained: " + item.itemName, item.itemImage, GetColorByItemClass(item));
-        ListItems(); // Updates the UI inventory
+        // Optionally update the UI
+        ListItems();
     }
 
     public void Remove(Item item)
     {
         Items.Remove(item);
-        ListItems();
+
     }
 
     public void ListItems()
     {
+        // Clean content before opening inventory
         foreach (Transform item in ItemContent)
         {
-
+            Destroy(item.gameObject);
         }
 
-        foreach (var item in Items)
+        // Create inventory items for each item in the inventory
+        foreach (Item item in Items)
         {
+            // Customize inventory item UI based on item properties
+            // Example: Set text, images, etc.
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("itemName").GetComponent<TMP_Text>();
             var itemImage = obj.transform.Find("itemImage").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemImage.sprite = item.itemImage;
+
+            // Assign the item and itemEffects to the ItemController
+            var itemController = obj.GetComponent<ItemController>();
+            if (itemController != null)
+            {
+                itemController.AddItem(item);
+                itemController.itemEffects = ItemEffects.Instance; // Assuming ItemEffects is a singleton
+            }
+            else
+            {
+                Debug.LogError("ItemController not found on inventory item prefab.");
+            }
         }
 
-        //SetInventoryItems();
+        SetInventoryItems();
+    }
+
+    public void SetInventoryItems()
+    {
+        InventoryItems = ItemContent.GetComponentsInChildren<ItemController>();
+
+        for (int i = 0; i < Items.Count; i++) 
+        {
+            InventoryItems[i].AddItem(Items[i]);
+        }
     }
 
     public void ShowItemPickupMessage(Item item)
@@ -129,13 +143,5 @@ public class InventoryManager : MonoBehaviour
         return defaultColor; // Return default color if no class is matched
     }
 
-    /*public void SetInventoryItems()
-    {
-        InventoryItems = ItemContent.GetComponentsInChildren<ItemController>();
-
-        for (int i = 0; i < Items.Count; i++)
-        {
-            InventoryItems[i].AddItem(Items[i]);
-        }
-    }*/
 }
+

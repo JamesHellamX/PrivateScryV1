@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,5 +62,6 @@ public class ItemPickup : MonoBehaviour
         InventoryManager.Instance.Add(Item);
         // Mark the item as picked up
         isPickedUp = true;
+        
     }
 }

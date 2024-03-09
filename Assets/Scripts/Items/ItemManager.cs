@@ -21,23 +21,6 @@ public class ItemManager : MonoBehaviour
 
     }
 
-    // Function to use an item based on its ID
-    public void UseItemByID(int itemID)
-    {
-        Debug.Log("UseItemByID is being called");
-        // Check if the item ID exists in the dictionary
-
-        if (itemActions.ContainsKey(itemID))
-        {
-            // Execute the corresponding action or function for the item ID
-            itemActions[itemID].Invoke();
-        }
-        else
-        {
-            Debug.LogWarning("No action defined for item ID: " + itemID);
-        }
-    }
-
     public void Remove(Item item)
     {
         inventoryManager.Remove(item);
