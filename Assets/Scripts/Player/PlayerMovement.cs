@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 MoveDampVelocity;
 
     private Vector3 CurrentForceVelocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if arrow keys are pressed and skip movement calculations
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
+            Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            return;
+        }
+
         Vector3 PlayerInput = new Vector3
         {
             x = Input.GetAxisRaw("Horizontal"),
@@ -66,3 +74,4 @@ public class PlayerMovement : MonoBehaviour
         Controller.Move(CurrentForceVelocity * Time.deltaTime);
     }
 }
+
