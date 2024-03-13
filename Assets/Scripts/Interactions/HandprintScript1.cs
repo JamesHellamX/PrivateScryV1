@@ -12,7 +12,7 @@ public class HandprintScript1 : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("9");
+
         Vector3 currentPosition = Door.transform.position;
 
         Vector3 newPosition = new Vector3(currentPosition.x, currentPosition.y + moveDistance);

@@ -9,6 +9,7 @@ public class ItemPickup : MonoBehaviour
     public string playerTag = "Player";
     public float PickupRange = 10f; // Adjust this value based on your desired pickup range
     public PlayerItemRange PR;
+    public GameObject CanvasEToPickup;
 
     private bool isPickedUp = false; // Flag to check if the item has already been picked up
 
@@ -31,6 +32,7 @@ public class ItemPickup : MonoBehaviour
                     {
 
                         Pickup();
+                        CanvasEToPickup.SetActive(false);
 
                     }
                 }

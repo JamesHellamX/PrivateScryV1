@@ -7,6 +7,7 @@ public class SpectralObjectInteraction : MonoBehaviour
     public GameObject requiredObject; // The other game object that needs to be active
     public GameObject spectralObject; // The object the player interacts with
     public GameObject interactionScriptObject; // The GameObject containing the interaction script
+    public GameObject CanvasEToInteract;
     public string playerTag = "Player";
     public float interactionDistance = 3f;
 
@@ -27,12 +28,13 @@ public class SpectralObjectInteraction : MonoBehaviour
 
                 if (distanceToPlayer <= interactionDistance && requiredObject.activeSelf)
                 {
+                    CanvasEToInteract.SetActive(true);
 
                     canInteract = true;
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        Debug.Log("5");
                         Interact();
+
                     }
                 }
                 else
