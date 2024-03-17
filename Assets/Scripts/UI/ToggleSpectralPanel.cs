@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TogglePanel : MonoBehaviour
 {
     public GameObject panelToToggle;
+    public GameObject EToInteract;
     public float activeDuration = 10f; // Duration in seconds
     private bool panelActive = false;
 
@@ -43,6 +44,7 @@ public class TogglePanel : MonoBehaviour
         {
             panelActive = false;
             panelToToggle.SetActive(false);
+            EToInteract.SetActive(false);
 
             // Disable interaction components
             Collider[] colliders = panelToToggle.GetComponentsInChildren<Collider>(true);

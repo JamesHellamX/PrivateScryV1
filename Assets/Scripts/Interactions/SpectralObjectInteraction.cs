@@ -39,7 +39,7 @@ public class SpectralObjectInteraction : MonoBehaviour
                 }
                 else
                 {
-
+                    CanvasEToInteract.SetActive(false);
                 }
             }
         }
@@ -47,5 +47,6 @@ public class SpectralObjectInteraction : MonoBehaviour
     void Interact()
     {
         interactionScriptObject.SetActive(true);
+        CanvasEToInteract.SetActive(false);
     }
 }
