@@ -27,7 +27,7 @@ public class ItemPickup : MonoBehaviour
 
                 if (distanceToPlayer <= PickupRange)
                 {
-
+                    CanvasEToPickup.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.E))
                     {
 

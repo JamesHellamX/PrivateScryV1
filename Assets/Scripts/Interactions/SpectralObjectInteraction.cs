@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpectralObjectInteraction : MonoBehaviour
 {
-    public GameObject requiredObject; // The other game object that needs to be active
+    public GameObject spectralPanel; // The other game object that needs to be active
     public GameObject spectralObject; // The object the player interacts with
     public GameObject interactionScriptObject; // The GameObject containing the interaction script
     public GameObject CanvasEToInteract;
     public string playerTag = "Player";
-    public float interactionDistance = 3f;
+    public float interactionDistance = 1f;
 
     private bool canInteract = false;
     private bool isInteracting = false;
@@ -26,7 +26,7 @@ public class SpectralObjectInteraction : MonoBehaviour
                 // Check if the player is within the specified range
                 float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-                if (distanceToPlayer <= interactionDistance && requiredObject.activeSelf)
+                if (distanceToPlayer <= interactionDistance && spectralPanel.activeSelf)
                 {
                     CanvasEToInteract.SetActive(true);
 
@@ -37,10 +37,7 @@ public class SpectralObjectInteraction : MonoBehaviour
 
                     }
                 }
-                else
-                {
-                    CanvasEToInteract.SetActive(false);
-                }
+
             }
         }
     }
@@ -48,5 +45,6 @@ public class SpectralObjectInteraction : MonoBehaviour
     {
         interactionScriptObject.SetActive(true);
         CanvasEToInteract.SetActive(false);
+        
     }
 }
