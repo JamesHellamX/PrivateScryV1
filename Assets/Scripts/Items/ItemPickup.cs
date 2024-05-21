@@ -61,11 +61,23 @@ public class ItemPickup : MonoBehaviour
 
     void Pickup()
     {
+        // Check if the item has dialogue attached
+        if (Item.dialogue != null && DialogueManager.Instance != null)
+        {
+            // Play dialogue
+            Debug.Log("Pickup1");
+            DialogueManager.Instance.StartDialogue(Item.dialogue);
+        }
+        else
+        {
+            Debug.LogWarning("Dialogue or DialogueManager is not set up properly.");
+        }
+
         InventoryManager.Instance.Add(Item);
         // Mark the item as picked up
         isPickedUp = true;
 
         Destroy(gameObject);
-        
     }
+
 }

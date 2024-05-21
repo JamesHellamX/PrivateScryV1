@@ -9,6 +9,7 @@ public class ItemController : MonoBehaviour
 
     public void RemoveItem()
     {
+
         InventoryManager.Instance.Remove(item);
 
         Destroy(gameObject);
@@ -23,6 +24,8 @@ public class ItemController : MonoBehaviour
     {
         switch (item.itemID)
         {
+            case Item.ItemID.IDNULL:
+                break;
             // "case" is refering to the assigned ItemID of the object. Example: "Journal" has the itemID of '1'.
             case Item.ItemID.ID1:
                 Debug.Log("Using Item with ID 1: Journal");

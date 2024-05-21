@@ -12,9 +12,11 @@ public class Item : ScriptableObject
     public bool consumable;
     public bool questObject;
     public bool keyItem;
+    public Dialogue dialogue; // reference to the dialogue scriptable object
 
     public enum ItemID
     {
+        IDNULL,
         ID1,
         ID2,
         ID3,
