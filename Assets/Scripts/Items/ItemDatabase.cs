@@ -1,36 +1,28 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item Database", menuName = "Inventory/Item Database")]
+[CreateAssetMenu(fileName = "ItemDatabase", menuName = "Inventory/ItemDatabase")]
 public class ItemDatabase : ScriptableObject
 {
-    public static ItemDatabase Instance;
-    public List<Item> items = new List<Item>();
+    public List<Item> items;
 
-    private void Awake()
+    private static ItemDatabase _instance;
+    public static ItemDatabase Instance
     {
-        if (Instance == null)
+        get
         {
-            Instance = this;
-        }
-        else 
-        {
-            //Destroy(gameObject);
+            if (_instance == null)
+            {
+                _instance = Resources.Load<ItemDatabase>("ItemDatabase");
+            }
+            return _instance;
         }
     }
 
-    // Method to retrieve an item by its ID
-    public Item GetItemByID(int id)
+    public Item GetItemByID(Item.ItemID id)
     {
-        foreach (Item item in items)
-        {
-            if ((int)item.itemID == id)
-            {
-                return item;
-            }
-        }
-        return null; // Return null if no item with the specified ID is found
+        return items.Find(item => item.itemID == id);
     }
 }
+
 

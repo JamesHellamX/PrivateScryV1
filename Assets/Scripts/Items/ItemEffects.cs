@@ -47,22 +47,31 @@ public class ItemEffects : MonoBehaviour
 
     public void ItemEffectID3()
     {
-        // Retrieve the item with ID 4 from the ItemDatabase and add it to the inventory
-        Item itemToAdd = itemDatabase.GetItemByID(4);
-        if (itemToAdd != null)
+        Debug.Log("ItemEffectID3 called");
+
+        if (itemDatabase == null)
         {
-            InventoryManager.Instance.Add(itemToAdd);
+            Debug.LogError("ItemDatabase is not assigned in the ItemEffects script.");
+            return;
+        }
+
+        Item spectralKey = itemDatabase.GetItemByID(Item.ItemID.ID4);  // Use enum instead of int
+        if (spectralKey != null)
+        {
+            InventoryManager.Instance.Add(spectralKey);
+            Debug.Log("Spectral Key added to the inventory");
         }
         else
         {
-            Debug.LogWarning("Item with ID 4 not found in the ItemDatabase.");
+            Debug.LogError("Spectral Key item not found in the ItemDatabase.");
         }
     }
 
 
-public void ItemEffectID4()
+    public void ItemEffectID4()
     {
         SpectralKeyButton.SetActive(true);
+        Destroy(gameObject);
     }
 
     public void ItemEffectID5()
