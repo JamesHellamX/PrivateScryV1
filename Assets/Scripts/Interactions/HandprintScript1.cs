@@ -8,6 +8,7 @@ public class HandprintScript1 : MonoBehaviour
     public GameObject Door;
     public GameObject SpectralHandprint;
     public float moveDistance = 1.0f;
+    public GameObject EtoInteract;
 
 
     void Update()
@@ -20,6 +21,8 @@ public class HandprintScript1 : MonoBehaviour
         Door.transform.position = newPosition;
 
         SpectralHandprint.SetActive(false);
+
+        EtoInteract.SetActive(false);
 
         Destroy(gameObject);
     }

@@ -36,6 +36,10 @@ public class ItemPickup : MonoBehaviour
 
                     }
                 }
+                else
+                {
+                    CanvasEToPickup.SetActive(false);
+                }
             }
         }
     }

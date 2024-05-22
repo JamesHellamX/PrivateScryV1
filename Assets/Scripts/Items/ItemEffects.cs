@@ -8,9 +8,14 @@ public class ItemEffects : MonoBehaviour
 
     public ItemDatabase itemDatabase; // Reference to the ItemDatabase ScriptableObject
 
+    public DialogueManager _dialogueManager;
+
     public GameObject Journal;
     public GameObject SpectralKeyItem;
     public GameObject SpectralKeyButton;
+    public Item EnergyDrink;
+    public Item SpectralKey;
+
 
     private void Awake()
     {
@@ -60,6 +65,9 @@ public class ItemEffects : MonoBehaviour
         {
             InventoryManager.Instance.Add(spectralKey);
             Debug.Log("Spectral Key added to the inventory");
+            InventoryManager.Instance.Remove(EnergyDrink);
+            InventoryManager.Instance.ListItems();
+
         }
         else
         {
@@ -70,8 +78,8 @@ public class ItemEffects : MonoBehaviour
 
     public void ItemEffectID4()
     {
+
         SpectralKeyButton.SetActive(true);
-        Destroy(gameObject);
     }
 
     public void ItemEffectID5()
