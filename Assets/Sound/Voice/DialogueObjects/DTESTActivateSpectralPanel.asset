@@ -20,5 +20,3 @@ MonoBehaviour:
   - text: You are using a spellform called "Spectral Sense". Attuning yourself to
       an object with latent magic allows you to see shades of events past.
     audioClip: {fileID: 8300000, guid: b87ebc4eb1ee56840b36ddd7cc2c88a4, type: 3}
-  - text: 
-    audioClip: {fileID: 0}

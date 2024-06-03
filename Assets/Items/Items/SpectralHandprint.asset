@@ -19,4 +19,4 @@ MonoBehaviour:
   consumable: 0
   questObject: 0
   keyItem: 0
-  dialogue: {fileID: 11400000, guid: 46528ccdaa46f8c48b4de403d0346ec1, type: 2}
+  dialogue: {fileID: 11400000, guid: 5e4d167f94ec5474eb4c16db98e33ae3, type: 2}

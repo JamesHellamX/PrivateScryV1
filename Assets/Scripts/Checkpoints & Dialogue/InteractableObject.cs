@@ -5,7 +5,7 @@ public class InteractableObject : MonoBehaviour
     public string checkpointToSet;     // Name of the checkpoint to set when this object is interacted with
     public Dialogue dialogueToTrigger; // Reference to the Dialogue ScriptableObject to trigger
 
-    private bool hasInteracted = false; // Flag to track whether the player has interacted with the object
+    //private bool hasInteracted = false; // Flag to track whether the player has interacted with the object
     private bool isPlayingDialogue = false; // Flag to track if dialogue is currently playing
 
     // Remove the Interact method
@@ -13,7 +13,7 @@ public class InteractableObject : MonoBehaviour
     public void StartDialogue()
     {
         // Set flag to indicate interaction
-        hasInteracted = true;
+        //hasInteracted = true;
 
         // Set checkpoint if specified
         if (!string.IsNullOrEmpty(checkpointToSet))

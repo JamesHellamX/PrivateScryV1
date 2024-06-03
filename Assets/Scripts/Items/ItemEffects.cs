@@ -7,14 +7,18 @@ public class ItemEffects : MonoBehaviour
     public static ItemEffects Instance;
 
     public ItemDatabase itemDatabase; // Reference to the ItemDatabase ScriptableObject
+    public CheckpointManager checkpointManager;
 
     public DialogueManager _dialogueManager;
 
     public GameObject Journal;
-    public GameObject SpectralKeyItem;
     public GameObject SpectralKeyButton;
+    public GameObject SpectralPanel;
     public Item EnergyDrink;
     public Item SpectralKey;
+    public ScriptableStartDialogue _dialogue;
+
+    public Dialogue DTESTActivateSpectralPanel;
 
 
     private void Awake()
@@ -65,9 +69,16 @@ public class ItemEffects : MonoBehaviour
         {
             InventoryManager.Instance.Add(spectralKey);
             Debug.Log("Spectral Key added to the inventory");
+
+            // Check if the spectral key has a dialogue and start it
+            if (spectralKey.dialogue != null)
+            {
+                DialogueManager.Instance.StartDialogue(spectralKey.dialogue);
+            }
+
+            // Remove the used item (assuming it's the energy drink)
             InventoryManager.Instance.Remove(EnergyDrink);
             InventoryManager.Instance.ListItems();
-
         }
         else
         {
@@ -80,6 +91,16 @@ public class ItemEffects : MonoBehaviour
     {
 
         SpectralKeyButton.SetActive(true);
+        if (SpectralPanel.activeSelf == true)
+        {
+            bool isFlagOn = checkpointManager.GetCheckpoint("FirstSpectralPanel");
+        }
+        else
+        {
+
+        }
+        //DialogueManager.Instance.StartDialogue(DTESTActivateSpectralPanel);
+
     }
 
     public void ItemEffectID5()

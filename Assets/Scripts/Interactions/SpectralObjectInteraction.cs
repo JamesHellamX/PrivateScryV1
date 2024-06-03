@@ -12,7 +12,7 @@ public class SpectralObjectInteraction : MonoBehaviour
     public float interactionDistance = 1f;
     public Item Item;
 
-    private bool canInteract = false;
+    //private bool canInteract = false;
     private bool isInteracting = false;
 
     void Update()
@@ -31,14 +31,14 @@ public class SpectralObjectInteraction : MonoBehaviour
                 {
                     CanvasEToInteract.SetActive(true);
 
-                    canInteract = true;
+                    //canInteract = true;
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         // Check if the item has dialogue attached
                         if (Item.dialogue != null && DialogueManager.Instance != null)
                         {
                             // Play dialogue
-                            Debug.Log("Pickup1");
+                            Debug.Log("SpectralInteraction");
                             DialogueManager.Instance.StartDialogue(Item.dialogue);
                         }
                         else
