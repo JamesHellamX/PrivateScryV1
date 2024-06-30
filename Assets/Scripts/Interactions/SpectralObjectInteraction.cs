@@ -34,6 +34,7 @@ public class SpectralObjectInteraction : MonoBehaviour
                     //canInteract = true;
                     if (Input.GetKeyDown(KeyCode.E))
                     {
+                        CanvasEToInteract.SetActive(false);
                         // Check if the item has dialogue attached
                         if (Item.dialogue != null && DialogueManager.Instance != null)
                         {
@@ -52,7 +53,7 @@ public class SpectralObjectInteraction : MonoBehaviour
                 }
                 else
                 {
-                    CanvasEToInteract.SetActive(false);
+
                 }
 
             }

@@ -51,7 +51,7 @@ public class ItemEffects : MonoBehaviour
 
     public void ItemEffectID2()
     {
-
+        
     }
 
     public void ItemEffectID3()

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1715d70138e3b22438b0bb8cb0ab5c0d, type: 3}
+  m_Name: GlowOrbDialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: Finally. Wake your ass up, Vic. Got a job for you.
+    audioClip: {fileID: 8300000, guid: 83716c2ba4ff9f7469a99a42e7b797b1, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: Is that right? To what do I owe the pleasure.
+    audioClip: {fileID: 8300000, guid: 1610cb3e5e8fea145a9eed2da424154f, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: Missing girl. Friend called in after she didnt hear from her for a few
+      days. Apartment is trashed but theres no sign of forced entry.
+    audioClip: {fileID: 8300000, guid: fe6c1cb11f457a341a4b9f8de0197c82, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: Let me guess, you need a spectral trail analysis?
+    audioClip: {fileID: 8300000, guid: 35ae17c6e7b8a4946989028c46b1bdad, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: Bingo. Grant Road, Apartment 2814.
+    audioClip: {fileID: 8300000, guid: 2216c9121fa93c54abf66a2a52e0d830, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alright, guess that''s worth a look. Thanks Chris. '
+    audioClip: {fileID: 8300000, guid: 7f9f2e06f277f8b40bdd779b1306e17d, type: 3}
