@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointName: GlowFlag1
   description: Causes magic orb to glow
-  isAchieved: 1
+  isAchieved: 0

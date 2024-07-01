@@ -99,7 +99,7 @@ public class ItemEffects : MonoBehaviour
         {
 
         }
-        //DialogueManager.Instance.StartDialogue(DTESTActivateSpectralPanel);
+        DialogueManager.Instance.StartDialogue(DTESTActivateSpectralPanel);
 
     }
 

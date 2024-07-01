@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4994136400348449604
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1871120051474783104, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_Name
+      value: ItemEffects Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334382627878241045, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: EnergyDrink
+      value: 
+      objectReference: {fileID: 11400000, guid: 22a40102aaf24574aad386d866d0f16a, type: 2}
+    - target: {fileID: 4334382627878241045, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: SpectralKey
+      value: 
+      objectReference: {fileID: 11400000, guid: 93aeaf42e0de1a74bbd8e335f31ea942, type: 2}
+    - target: {fileID: 4334382627878241045, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: itemDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: cb0444fba4d534e4f9918e7ab0767cbf, type: 2}
+    - target: {fileID: 4334382627878241045, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: DTESTActivateSpectralPanel
+      value: 
+      objectReference: {fileID: 11400000, guid: 18e95ea0c13a25e4d89da2f5665994b2, type: 2}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1492.0088
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 317.8933
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8174.2856
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942423075832128659, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50b25966a68f2af4aa8c0782fac13bba, type: 3}
