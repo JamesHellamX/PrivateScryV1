@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1715d70138e3b22438b0bb8cb0ab5c0d, type: 3}
+  m_Name: PoliceConvo
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: Hah! They really don't trust you to do anything interesting eh, Alan.
+    audioClip: {fileID: 0}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: Bite my prissy white ass, Vic. Just do your job then get out outta my face.
+    audioClip: {fileID: 0}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: Why so salty, Alan?
+    audioClip: {fileID: 0}
+  - text: Thought sitting on your ass was a favourite passtime.
+    audioClip: {fileID: 0}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: Try not to screw this up, Vic. Don't worry, there's no kids for you to
+      get killed this time.
+    audioClip: {fileID: 0}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: You're really fuckin asking for it, you know that?
+    audioClip: {fileID: 0}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: 'Go ahead, do it. It would be my pleasure to slap irons on you. '
+    audioClip: {fileID: 0}
