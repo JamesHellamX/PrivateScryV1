@@ -12,7 +12,9 @@ public class SpectralObjectInteraction : MonoBehaviour
     public float interactionDistance = 1f;
     public Item Item;
 
-    //private bool canInteract = false;
+    public bool IsInteractable;
+    public bool destroyAfterInteraction;
+
     private bool isInteracting = false;
 
     void Update()
@@ -23,7 +25,6 @@ public class SpectralObjectInteraction : MonoBehaviour
 
             if (player != null)
             {
-
                 // Check if the player is within the specified range
                 float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
@@ -31,7 +32,6 @@ public class SpectralObjectInteraction : MonoBehaviour
                 {
                     CanvasEToInteract.SetActive(true);
 
-                    //canInteract = true;
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         CanvasEToInteract.SetActive(false);
@@ -40,7 +40,7 @@ public class SpectralObjectInteraction : MonoBehaviour
                         {
                             // Play dialogue
                             Debug.Log("SpectralInteraction");
-                            DialogueManager.Instance.StartDialogue(Item.dialogue);
+                            DialogueManager.Instance.StartDialogue(Item.dialogue, destroyAfterInteraction ? gameObject : null);
                         }
                         else
                         {
@@ -48,20 +48,15 @@ public class SpectralObjectInteraction : MonoBehaviour
                         }
 
                         Interact();
-
                     }
                 }
-                else
-                {
-
-                }
-
             }
         }
     }
+
     void Interact()
     {
         interactionScriptObject.SetActive(true);
-        
     }
 }
+

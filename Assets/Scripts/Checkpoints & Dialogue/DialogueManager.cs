@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<Dialogue.DialogueLine> dialogueLines; // Queue to store dialogue lines
     private bool isDialoguePlaying = false; // Flag to indicate if dialogue is currently playing
+    private List<GameObject> objectsToDestroy; // List of GameObjects to be destroyed after dialogue ends
 
     private void Awake()
     {
@@ -31,9 +32,10 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueLines = new Queue<Dialogue.DialogueLine>();
+        objectsToDestroy = new List<GameObject>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, GameObject gameObjectToDestroy = null)
     {
         Debug.Log("Starting dialogue...");
         dialoguePanel.SetActive(true);
@@ -45,6 +47,12 @@ public class DialogueManager : MonoBehaviour
         }
 
         isDialoguePlaying = true;
+
+        if (gameObjectToDestroy != null)
+        {
+            objectsToDestroy.Add(gameObjectToDestroy);
+        }
+
         DisplayNextLine();
     }
 
@@ -85,6 +93,18 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Ending dialogue...");
         dialoguePanel.SetActive(false);
         isDialoguePlaying = false;
+
+        // Destroy the objects if specified
+        foreach (var obj in objectsToDestroy)
+        {
+            if (obj != null)
+            {
+                Destroy(obj);
+                Debug.Log("Destroyed object: " + obj.name);
+            }
+        }
+
+        objectsToDestroy.Clear();
     }
 
     public bool IsDialoguePlaying()
@@ -92,6 +112,7 @@ public class DialogueManager : MonoBehaviour
         return isDialoguePlaying;
     }
 }
+
 
 
 

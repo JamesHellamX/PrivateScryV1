@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1715d70138e3b22438b0bb8cb0ab5c0d, type: 3}
-  m_Name: PoliceConvo
+  m_Name: PoliceConvo1
   m_EditorClassIdentifier: 
   dialogueLines:
   - text: Hah! They really don't trust you to do anything interesting eh, Alan.
