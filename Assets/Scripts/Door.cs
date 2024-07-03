@@ -11,9 +11,9 @@ public class Door : MonoBehaviour
     public bool requiresCheckpoint = false; // Flag to determine if the door needs a checkpoint to open
     public string checkpointName; // Checkpoint name to check before opening
 
-    private bool open = false;
-    private bool enter = false;
-    private bool isPlayerInRange = false;
+    public bool open = false;
+    public bool enter = false;
+    //private bool isPlayerInRange = false;
     private float defaultRotationAngle;
     private float currentRotationAngle;
     private float openTime = 0;

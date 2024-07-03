@@ -11,12 +11,16 @@ public class ItemEffects : MonoBehaviour
 
     public DialogueManager _dialogueManager;
 
+    public GameObject Portal_A;
+    public Door DoorToClose;
     public GameObject Journal;
     public GameObject SpectralKeyButton;
     public GameObject SpectralPanel;
     public Item EnergyDrink;
     public Item SpectralKey;
     public ScriptableStartDialogue _dialogue;
+
+    public AudioSource DoorSlam;
 
     public Dialogue DTESTActivateSpectralPanel;
 
@@ -51,7 +55,10 @@ public class ItemEffects : MonoBehaviour
 
     public void ItemEffectID2()
     {
-        
+        //DoorSlam.Play();
+        //DoorToClose.open = false;
+        Portal_A.SetActive(true);
+
     }
 
     public void ItemEffectID3()

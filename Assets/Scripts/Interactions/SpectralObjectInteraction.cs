@@ -12,14 +12,14 @@ public class SpectralObjectInteraction : MonoBehaviour
     public float interactionDistance = 1f;
     public Item Item;
 
-    public bool IsInteractable;
-    public bool destroyAfterInteraction;
+    public bool IsInteractable = true;
+    //public bool destroyAfterInteraction;
 
     private bool isInteracting = false;
 
     void Update()
     {
-        if (!isInteracting)
+        if (!isInteracting && IsInteractable)
         {
             GameObject player = GameObject.FindGameObjectWithTag(playerTag);
 
@@ -31,32 +31,32 @@ public class SpectralObjectInteraction : MonoBehaviour
                 if (distanceToPlayer <= interactionDistance && spectralPanel.activeSelf)
                 {
                     CanvasEToInteract.SetActive(true);
-
+                    interactionScriptObject.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.E))
                     {
+
                         CanvasEToInteract.SetActive(false);
                         // Check if the item has dialogue attached
                         if (Item.dialogue != null && DialogueManager.Instance != null)
                         {
                             // Play dialogue
                             Debug.Log("SpectralInteraction");
-                            DialogueManager.Instance.StartDialogue(Item.dialogue, destroyAfterInteraction ? gameObject : null);
+                            DialogueManager.Instance.StartDialogue(Item.dialogue);
+                            IsInteractable = false;
                         }
                         else
                         {
                             Debug.LogWarning("Dialogue or DialogueManager is not set up properly.");
                         }
 
-                        Interact();
                     }
                 }
             }
         }
-    }
+        if (!isInteracting && !IsInteractable)
+        {
 
-    void Interact()
-    {
-        interactionScriptObject.SetActive(true);
+        }
     }
 }
 

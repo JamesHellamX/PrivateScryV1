@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: DTESTHandprintInteract
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: You're coming awfully in handy, Sera. Can't deny it.
-    audioClip: {fileID: 8300000, guid: 10a7407ade1bd044e916107c1ea5c94b, type: 3}
-  - text: You might have misheard me. My name is Seraphine, not Sera. I suggest you
-      remember that.
-    audioClip: {fileID: 8300000, guid: 8cda964aa5b950646b7ae2a56320a6be, type: 3}
-  - text: Seraphina takes time to say. I'm streamlining baby!
-    audioClip: {fileID: 8300000, guid: 9c25d971d508efd4081f838f24a87e86, type: 3}
+  - text: Hah, the old "moving painting" trick.
+    audioClip: {fileID: 0}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: Girl clearly had something to hide.
+    audioClip: {fileID: 0}

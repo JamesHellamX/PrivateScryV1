@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class HandprintScript1 : MonoBehaviour
 {
-
     public GameObject Door;
     public GameObject SpectralHandprint;
-    public float moveDistance = 1.0f;
+    public float moveDistance = 1.0f; // The distance you want the door to move
     public GameObject EtoInteract;
-
+    public GameObject PortalKey;
+    private bool hasInteracted = false; // To ensure the interaction happens only once
+    public Vector3 NewPosition;
+    public AudioSource DoorSlam;
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && !hasInteracted)
+        {
 
-        Vector3 currentPosition = Door.transform.position;
+            Door.transform.position = NewPosition;
 
-        Vector3 newPosition = new Vector3(currentPosition.x, currentPosition.y + moveDistance);
+            // Deactivate the handprint and interaction prompt
+            SpectralHandprint.SetActive(false);
+            EtoInteract.SetActive(false);
 
-        Door.transform.position = newPosition;
+            PortalKey.SetActive(true);
+            // Mark that the interaction has occurred
+            hasInteracted = true;
 
-        SpectralHandprint.SetActive(false);
-
-        EtoInteract.SetActive(false);
-
-        Destroy(gameObject);
+            // Destroy the handprint game object
+            Destroy(gameObject);
+        }
     }
 }
+

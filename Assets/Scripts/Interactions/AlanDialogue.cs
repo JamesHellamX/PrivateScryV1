@@ -6,6 +6,9 @@ public class AlanDialogue : MonoBehaviour
 {
     private bool isPlayerInRange = false; // Flag to check if player is within interaction range
 
+    public Item Alan;
+    public GameObject EToInteract;
+
     void Update()
     {
         // Check for interaction input (E key)
@@ -19,7 +22,17 @@ public class AlanDialogue : MonoBehaviour
     void Interact()
     {
         Debug.Log("Interacted with object: " + gameObject.name);
-        // Add your interaction logic here
+        if (Alan.dialogue != null && DialogueManager.Instance != null)
+        {
+            EToInteract.SetActive(false);
+            // Play dialogue
+            Debug.Log("SpectralInteraction");
+            DialogueManager.Instance.StartDialogue(Alan.dialogue);
+        }
+        else
+        {
+            Debug.LogWarning("Dialogue or DialogueManager is not set up properly.");
+        }
     }
 
     // Function called when another collider enters the trigger collider
@@ -27,6 +40,7 @@ public class AlanDialogue : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            EToInteract.SetActive(true);
             isPlayerInRange = true;
         }
     }
@@ -36,6 +50,7 @@ public class AlanDialogue : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            EToInteract.SetActive(false);
             isPlayerInRange = false;
             Debug.Log("Left interaction range");
         }
