@@ -13,7 +13,6 @@ public class InteractableObject : MonoBehaviour
     public void StartDialogue()
     {
         // Set flag to indicate interaction
-        //hasInteracted = true;
 
         // Set checkpoint if specified
         if (!string.IsNullOrEmpty(checkpointToSet))

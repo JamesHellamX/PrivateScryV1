@@ -55,8 +55,7 @@ public class ItemEffects : MonoBehaviour
 
     public void ItemEffectID2()
     {
-        //DoorSlam.Play();
-        //DoorToClose.open = false;
+        
         Portal_A.SetActive(true);
 
     }

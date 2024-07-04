@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HandprintScript1 : MonoBehaviour
 {
-    public GameObject Door;
+    public GameObject Painting;
     public GameObject SpectralHandprint;
     public float moveDistance = 1.0f; // The distance you want the door to move
     public GameObject EtoInteract;
@@ -18,7 +18,7 @@ public class HandprintScript1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !hasInteracted)
         {
 
-            Door.transform.position = NewPosition;
+            Painting.transform.position = NewPosition;
 
             // Deactivate the handprint and interaction prompt
             SpectralHandprint.SetActive(false);
