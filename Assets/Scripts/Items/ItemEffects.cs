@@ -18,6 +18,7 @@ public class ItemEffects : MonoBehaviour
     public GameObject SpectralPanel;
     public Item EnergyDrink;
     public Item SpectralKey;
+    public Item PortalKey;
     public ScriptableStartDialogue _dialogue;
 
     public AudioSource DoorSlam;
@@ -57,7 +58,7 @@ public class ItemEffects : MonoBehaviour
     {
         
         Portal_A.SetActive(true);
-
+        InventoryManager.Instance.Remove(PortalKey);
     }
 
     public void ItemEffectID3()

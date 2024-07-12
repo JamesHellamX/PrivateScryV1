@@ -32,7 +32,7 @@ public class ItemController : MonoBehaviour
                 ItemEffects.Instance.ItemEffectID1();
                 break;
             case Item.ItemID.ID2:
-                Debug.Log("Using item with ID 2: Mysterious Sphere");
+                Debug.Log("Using item with ID 2: PortalKey");
                 ItemEffects.Instance.ItemEffectID2();
                 break;
             case Item.ItemID.ID3:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - text: Hah! They really don't trust you to do anything interesting eh, Alan.
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 2216c9121fa93c54abf66a2a52e0d830, type: 3}
   - text: 
     audioClip: {fileID: 0}
   - text: Bite my prissy white ass, Vic. Just do your job then get out outta my face.

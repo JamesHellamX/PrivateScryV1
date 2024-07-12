@@ -26,6 +26,10 @@ public class CheckpointManager : MonoBehaviour
         if (checkpoint != null)
         {
             checkpoint.isAchieved = value;
+            if (value)
+            {
+                HintManager.Instance.ShowHint(checkpointName);
+            }
         }
         else
         {
@@ -39,3 +43,4 @@ public class CheckpointManager : MonoBehaviour
         return checkpoint != null && checkpoint.isAchieved;
     }
 }
+

@@ -8,6 +8,8 @@ public class AlanDialogue : MonoBehaviour
 
     public Item Alan;
     public GameObject EToInteract;
+    public Checkpoint SpectralSense01;
+    public Dialogue dialogue;
 
     void Update()
     {
@@ -25,9 +27,9 @@ public class AlanDialogue : MonoBehaviour
         if (Alan.dialogue != null && DialogueManager.Instance != null)
         {
             EToInteract.SetActive(false);
-            // Play dialogue
             Debug.Log("SpectralInteraction");
             DialogueManager.Instance.StartDialogue(Alan.dialogue);
+
         }
         else
         {
@@ -52,7 +54,6 @@ public class AlanDialogue : MonoBehaviour
         {
             EToInteract.SetActive(false);
             isPlayerInRange = false;
-            Debug.Log("Left interaction range");
         }
     }
 }
