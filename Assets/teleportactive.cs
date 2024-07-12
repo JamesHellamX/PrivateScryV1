@@ -8,10 +8,16 @@ public class Teleportactive : MonoBehaviour
     void Update()
     {
         // Check for interaction input (E key)
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInRange)
         {
-            Interact();
-            CanvasEToInteract.SetActive(false);
+            CanvasEToInteract.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
+        }
+        else if (!isPlayerInRange)
+        {
         }
     }
 
@@ -20,6 +26,7 @@ public class Teleportactive : MonoBehaviour
     {
         Debug.Log("Interacted with object: " + gameObject.name);
         TeleportMenu.SetActive(true);
+        CanvasEToInteract.SetActive(false);
     }
 
     // Function called when another collider enters the trigger collider
@@ -28,7 +35,6 @@ public class Teleportactive : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            CanvasEToInteract.SetActive(true);
         }
     }
 

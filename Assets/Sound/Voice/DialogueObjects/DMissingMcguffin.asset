@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: DMissingMcguffin
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: A shrine of some kind. Looks vaguely...
-    audioClip: {fileID: 0}
+  - text: 'Vic: A shrine of some kind. Looks vaguely...'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: Demonic.
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
-  - text: Was our girl some kind of cultist?
-    audioClip: {fileID: 0}
+  - text: 'Vic: Was our girl some kind of cultist?'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}

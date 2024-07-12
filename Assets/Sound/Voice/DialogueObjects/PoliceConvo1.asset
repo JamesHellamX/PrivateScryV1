@@ -13,28 +13,30 @@ MonoBehaviour:
   m_Name: PoliceConvo1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Hah! They really don't trust you to do anything interesting eh, Alan.
-    audioClip: {fileID: 8300000, guid: 2216c9121fa93c54abf66a2a52e0d830, type: 3}
+  - text: 'Vic: Hah! They really don''t trust you to do anything interesting eh,
+      Alan.'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: 
     audioClip: {fileID: 0}
-  - text: Bite my prissy white ass, Vic. Just do your job then get out outta my face.
-    audioClip: {fileID: 0}
+  - text: 'Officer: Bite my prissy white ass, Sinclair. Just do your job then get
+      out outta my face.'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: 
     audioClip: {fileID: 0}
-  - text: Why so salty, Alan?
-    audioClip: {fileID: 0}
+  - text: 'Vic: Why so salty, Alan?'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: Thought sitting on your ass was a favourite passtime.
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: 
     audioClip: {fileID: 0}
-  - text: Try not to screw this up, Vic. Don't worry, there's no kids for you to
-      get killed this time.
-    audioClip: {fileID: 0}
+  - text: 'Officer: Try not to screw this up, Vic. Don''t worry, there''s no kids
+      for you to get killed this time.'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: 
     audioClip: {fileID: 0}
-  - text: You're really fuckin asking for it, you know that?
-    audioClip: {fileID: 0}
+  - text: 'Vic: You''re really fuckin asking for it, you know that?'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: 
     audioClip: {fileID: 0}
-  - text: 'Go ahead, do it. It would be my pleasure to slap irons on you. '
-    audioClip: {fileID: 0}
+  - text: 'Officer: Go ahead, do it. It would be my pleasure to slap irons on you. '
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}

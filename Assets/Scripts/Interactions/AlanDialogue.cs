@@ -8,7 +8,6 @@ public class AlanDialogue : MonoBehaviour
 
     public Item Alan;
     public GameObject EToInteract;
-    public Checkpoint SpectralSense01;
     public Dialogue dialogue;
 
     void Update()
@@ -29,6 +28,7 @@ public class AlanDialogue : MonoBehaviour
             EToInteract.SetActive(false);
             Debug.Log("SpectralInteraction");
             DialogueManager.Instance.StartDialogue(Alan.dialogue);
+            CheckpointManager.Instance.SetCheckpoint("SpectralSense01", true);
 
         }
         else

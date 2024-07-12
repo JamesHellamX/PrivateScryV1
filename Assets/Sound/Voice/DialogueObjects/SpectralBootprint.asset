@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpectralBootprint
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Huh, that's odd. Only half a bootprint?
+  - text: 'Vic: Huh, that''s odd. Only half a bootprint?'
     audioClip: {fileID: 8300000, guid: ac46f79fc1e262448962db7e6cd5b87d, type: 3}

@@ -15,5 +15,5 @@ MonoBehaviour:
   dialogueLines:
   - text: 
     audioClip: {fileID: 8300000, guid: 8e68d66c35ba8df42ba32bd36289a2c4, type: 3}
-  - text: Strange sorta key. Not like any normal kinda key at least.
-    audioClip: {fileID: 0}
+  - text: 'Vic: Strange sorta key. Not like any normal kinda key at least.'
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}

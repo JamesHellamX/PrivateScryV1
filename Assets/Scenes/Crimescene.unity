@@ -14959,9 +14959,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hints:
   - checkpointName: SpectralSense01
-    hintMessage: Press 'S' to activate your Spectral Sense.
+    hintMessage: 'Hint: Press ''S'' to activate your Spectral Sense. Press ''I''
+      to activate your Inventory.'
   - checkpointName: PortalKeyAquired
-    hintMessage: Press 'I' to topen your Inventory.
+    hintMessage: 'Hint: Press ''I'' to topen your Inventory.'
   - checkpointName: 
     hintMessage: 
   - checkpointName: 
@@ -18685,7 +18686,7 @@ Transform:
   m_GameObject: {fileID: 1181935423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.01, y: 0.6872893, z: 0.49}
+  m_LocalPosition: {x: -0.01, y: 0.6872893, z: -0.439}
   m_LocalScale: {x: 0.08826315, y: 0.068143, z: 0.09935375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19561,8 +19562,8 @@ Transform:
   m_GameObject: {fileID: 1296571764}
   serializedVersion: 2
   m_LocalRotation: {x: 0.24184479, y: 0.66446304, z: -0.66446304, w: 0.24184479}
-  m_LocalPosition: {x: 1648.31, y: 222.9, z: 7416.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1648.31, y: 222.9, z: 7419.34}
+  m_LocalScale: {x: 0.576134, y: 0.6738216, z: 0.72614}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1456096299}
@@ -21599,7 +21600,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21616,8 +21617,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21684,7 +21685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151, y: -21}
+  m_AnchoredPosition: {x: 2, y: 1}
   m_SizeDelta: {x: 1709.0125, y: 228.1357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1456096298
@@ -32962,7 +32963,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Alan: {fileID: 11400000, guid: bd69beb0cb98a6741b16f5da11b2b3f5, type: 2}
   EToInteract: {fileID: 7122608752578218806}
-  SpectralSense01: {fileID: 11400000, guid: ad5a0b7381e9b6b439c7f3458b466e9a, type: 2}
   dialogue: {fileID: 11400000, guid: fe526f28299af6c44a2fb20fc85f1449, type: 2}
 --- !u!65 &2082565927
 BoxCollider:
@@ -32983,8 +32983,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.011963, y: 2, z: 1.8145393}
-  m_Center: {x: -0.50598145, y: 0, z: -0.40726966}
+  m_Size: {x: 2.127391, y: 2, z: 2.1442728}
+  m_Center: {x: -0.56369555, y: 0, z: -0.5721364}
 --- !u!43 &2084368238
 Mesh:
   m_ObjectHideFlags: 0
@@ -40017,7 +40017,7 @@ Transform:
   m_GameObject: {fileID: 6591736165449221169}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.133}
   m_LocalScale: {x: 1.0378113, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41439,7 +41439,7 @@ Transform:
   m_GameObject: {fileID: 2962504154674569125}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.252}
   m_LocalScale: {x: 0.21, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42300,6 +42300,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7c5777d8f98fbff4abf5fcb5c0ab50ac, type: 2}
   - {fileID: 11400000, guid: 4e8bcf5f19b3fc1489e23fe4bb703157, type: 2}
   - {fileID: 11400000, guid: 37bb2b80fdd872c44ab2097772bf6193, type: 2}
+  - {fileID: 11400000, guid: ad5a0b7381e9b6b439c7f3458b466e9a, type: 2}
 --- !u!4 &6153051487803231169
 Transform:
   m_ObjectHideFlags: 0
@@ -43509,8 +43510,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284804351
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282681015
+  m_fontColor: {r: 0.7169812, g: 0.52515286, b: 0.26717696, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -43533,7 +43534,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -43870,7 +43871,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2320329999276109941}
-  - {fileID: 4786756714590287579}
   - {fileID: 5978305196103995994}
   - {fileID: 1537480400007844001}
   - {fileID: 6074871370658742025}
@@ -43878,6 +43878,7 @@ RectTransform:
   - {fileID: 3114121259274154167}
   - {fileID: 9165777324995100717}
   - {fileID: 262155663}
+  - {fileID: 4786756714590287579}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -45476,8 +45477,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 0, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 0.36956853, z: 2.9999998}
+  m_Center: {x: 0, y: -0.18478446, z: -0.000000010503472}
 --- !u!64 &8909197950428158923
 MeshCollider:
   m_ObjectHideFlags: 0

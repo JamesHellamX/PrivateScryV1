@@ -22,12 +22,12 @@ public class TeleportManager : MonoBehaviour
     public void CrimeScene()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("Crimescene");
 
     }
 
     public void Home()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Home");
     }
 }
