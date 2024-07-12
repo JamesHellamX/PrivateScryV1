@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text dialogueText; // Reference to a TMP_Text element to display the dialogue
     public GameObject dialoguePanel; // Panel that contains the dialogue UI
+    public GameObject dialogueBackdrop; // Backdrop for dialogue
     public AudioSource audioSource; // Reference to the AudioSource component
 
     public static DialogueManager Instance { get { return _instance; } }
@@ -39,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Starting dialogue...");
         dialoguePanel.SetActive(true);
+        dialogueBackdrop.SetActive(true);
         dialogueLines.Clear();
 
         foreach (Dialogue.DialogueLine line in dialogue.dialogueLines)

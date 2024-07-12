@@ -51,6 +51,10 @@ public class SpectralObjectInteraction : MonoBehaviour
 
                     }
                 }
+                else if (distanceToPlayer > interactionDistance)
+                {
+
+                }
             }
         }
         if (!isInteracting && !IsInteractable)

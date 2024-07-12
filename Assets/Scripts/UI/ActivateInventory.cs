@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
+using UnityEngine.UI;
 
 public class ActivateInventory : MonoBehaviour
 {
     public GameObject Inventory;
     public GameObject SpectralPanel;
     public GameObject Portal_A;
+    public GameObject EscapeMenu;
     //public GameObject Journal;
     // Start is called before the first frame update
     void Start()
@@ -56,6 +57,7 @@ public class ActivateInventory : MonoBehaviour
                 Portal_A.SetActive(true);
             }
         }
+
 
         /*if (Input.GetKeyDown(KeyCode.J))
         {
