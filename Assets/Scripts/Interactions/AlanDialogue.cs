@@ -18,54 +18,47 @@ public class AlanDialogue : MonoBehaviour
 
     void Update()
     {
-        if (isInteractable)
+        if (isInteractable && Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E)) 
+            if (CheckpointManager.Instance.GetCheckpoint("[C]Alan1"))
             {
-                if (CheckpointManager.Instance.GetCheckpoint("[C]Alan1"))
-                {
-                    DialogueManager.Instance.StartDialogue(DAlan1);
-                    CheckpointManager.Instance.SetCheckpoint("[C]Alan1", false);
-                    isInteractable=false;
-                    EToTalk.SetActive(false);
-                }
-                if (CheckpointManager.Instance.GetCheckpoint("[C]Alan2"))
-                {
-                    DialogueManager.Instance.StartDialogue(DAlan2);
-                    CheckpointManager.Instance.SetCheckpoint("[C]Alan2", false);
-                    isInteractable = false;
-                    EToTalk.SetActive(false);
-                }
-                if (CheckpointManager.Instance.GetCheckpoint("[C]Alan3"))
-                {
-                    DialogueManager.Instance.StartDialogue(DAlan3);
-                    CheckpointManager.Instance.SetCheckpoint("[C]Alan3", false);
-                    isInteractable = false;
-                    EToTalk.SetActive(false);
-                }
-                else { }
+                DialogueManager.Instance.StartDialogue(DAlan1);
+                CheckpointManager.Instance.SetCheckpoint("[C]Alan1", false);
+                isInteractable = false;
+                EToTalk.SetActive(false);
+            }
+            else if (CheckpointManager.Instance.GetCheckpoint("[C]Alan2"))
+            {
+                DialogueManager.Instance.StartDialogue(DAlan2);
+                CheckpointManager.Instance.SetCheckpoint("[C]Alan2", false);
+                isInteractable = false;
+                EToTalk.SetActive(false);
+            }
+            else if (CheckpointManager.Instance.GetCheckpoint("[C]Alan3"))
+            {
+                DialogueManager.Instance.StartDialogue(DAlan3);
+                CheckpointManager.Instance.SetCheckpoint("[C]Alan3", false);
+                isInteractable = false;
+                EToTalk.SetActive(false);
             }
         }
-        else { }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isInteractable)
+        if (other.CompareTag("Player") && isInteractable)
         {
             EToTalk.SetActive(true);
-        }
-        else
-        {
-
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            EToTalk.SetActive(false);
+        }
     }
-
 }
+
 

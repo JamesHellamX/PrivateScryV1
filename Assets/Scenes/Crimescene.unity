@@ -7956,7 +7956,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 304d96c575d4ae64aad0257418d4a94c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -7612550591543939042, guid: d7e0614f691fc49428fb865aa0a2cbbc, type: 3}
+      objectReference: {fileID: -7612550591543939042, guid: d1ce98b0a91563340a7e909f825f45a1, type: 3}
     - target: {fileID: 919132149155446097, guid: 304d96c575d4ae64aad0257418d4a94c, type: 3}
       propertyPath: m_Name
       value: Shelves
@@ -20620,7 +20620,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 304d96c575d4ae64aad0257418d4a94c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -7612550591543939042, guid: d7e0614f691fc49428fb865aa0a2cbbc, type: 3}
+      objectReference: {fileID: -7612550591543939042, guid: d1ce98b0a91563340a7e909f825f45a1, type: 3}
     - target: {fileID: 919132149155446097, guid: 304d96c575d4ae64aad0257418d4a94c, type: 3}
       propertyPath: m_Name
       value: Shelves (1)
@@ -44893,8 +44893,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637839313840202011}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 231.7, y: 42.235992, z: 64.7}
+  m_LocalRotation: {x: -0, y: 0.70418394, z: -0, w: 0.71001774}
+  m_LocalPosition: {x: 186.2, y: 42.235992, z: 64.7}
   m_LocalScale: {x: 29.77993, y: 29.779928, z: 29.77993}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44904,7 +44904,7 @@ Transform:
   - {fileID: 5167621167045209617}
   - {fileID: 5747029741710826293}
   m_Father: {fileID: 1410823458}
-  m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.527, z: 0}
 --- !u!1 &261089295431071170
 GameObject:
   m_ObjectHideFlags: 0
@@ -46928,7 +46928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f97a7d76bcc78a4d95d0751a4ad7ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EToTalk: {fileID: 0}
+  EToTalk: {fileID: 617559362}
   isInteractable: 0
   DAlan1: {fileID: 11400000, guid: fe526f28299af6c44a2fb20fc85f1449, type: 2}
   DAlan2: {fileID: 11400000, guid: 727a7c33b634dc3478837bb6c778b29c, type: 2}
@@ -46974,8 +46974,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.7838603, z: 1}
-  m_Center: {x: 0, y: 0.8045244, z: 0}
+  m_Size: {x: 1.2027862, y: 1.7838603, z: 1.3084043}
+  m_Center: {x: -0.10139324, y: 0.8045244, z: 0.0011347407}
 --- !u!4 &659379337401663816
 Transform:
   m_ObjectHideFlags: 0
@@ -79732,6 +79732,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 195bcf2af4c2b6a4ea3ccd0275c24e10, type: 2}
   - {fileID: 11400000, guid: 3757d3d4e1001304d827b35375348ced, type: 2}
   - {fileID: 11400000, guid: 0bbafe593f93a7b499b82a707436337e, type: 2}
+  - {fileID: 11400000, guid: 2a1ab334591fa524882d8639866a96db, type: 2}
+  - {fileID: 11400000, guid: 397159ea6edfcd3469c1d62c1dbd6aa6, type: 2}
+  - {fileID: 11400000, guid: cadad7ec05e29dd4cbcf297eaae6a31f, type: 2}
 --- !u!114 &6147773824623248630
 MonoBehaviour:
   m_ObjectHideFlags: 0

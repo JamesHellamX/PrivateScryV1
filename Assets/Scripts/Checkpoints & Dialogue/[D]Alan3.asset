@@ -12,4 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1715d70138e3b22438b0bb8cb0ab5c0d, type: 3}
   m_Name: '[D]Alan3'
   m_EditorClassIdentifier: 
-  dialogueLines: []
+  dialogueLines:
+  - text: 'Vic: Not entirely sure how to describe what I''m seeing, Al.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alan: Well, spit it out.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Vic: There''s... some kinda portal hidden in the laundry room. Found a
+      key that tuned it on.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: A... portal. Sure. And what was on the other side?
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: A room. Looked like some kinda shrine. Definately occult. There's a body
+      in there too, Al.
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alan: A body?! Is it the girl?'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: No, some random human. Not a hate crime, sorry.
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alan: You find anything else?'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Voice: Don''t tell him. Don''t mention the artefact.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Vic: Uh... no. Nothing on the corpse.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alan: Well then, this is turning into a whole lotta bullshit. Can''t believe
+      theres an actual portal. That kinda thing aint exactly common.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Vic: Yeah, you''re telling me. I''m gonna head out. Call you if I find
+      anything else.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alan: You''re taking the case, then?'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Vic: Yeah. Guess so. See you, Al.'
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
