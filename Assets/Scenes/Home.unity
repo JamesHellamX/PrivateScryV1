@@ -3343,7 +3343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d561164043aaa45b2c78d648db1c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoToCrimescene: {fileID: 191265966}
+  GoToScene: {fileID: 191265966}
+  sceneToLoad: Crimescene
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

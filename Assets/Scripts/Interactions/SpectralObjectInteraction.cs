@@ -11,6 +11,7 @@ public class SpectralObjectInteraction : MonoBehaviour
     public string playerTag = "Player";
     public float interactionDistance = 1f;
     public Item Item;
+    public string Checkpoint;
 
     public bool IsInteractable = true;
     //public bool destroyAfterInteraction;
@@ -43,6 +44,7 @@ public class SpectralObjectInteraction : MonoBehaviour
                             Debug.Log("SpectralInteraction");
                             DialogueManager.Instance.StartDialogue(Item.dialogue);
                             IsInteractable = false;
+                            CheckpointManager.Instance.SetCheckpoint(Checkpoint, true);
                         }
                         else
                         {

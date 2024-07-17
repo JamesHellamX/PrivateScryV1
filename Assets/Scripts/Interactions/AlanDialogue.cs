@@ -4,57 +4,68 @@ using UnityEngine;
 
 public class AlanDialogue : MonoBehaviour
 {
-    private bool isPlayerInRange = false; // Flag to check if player is within interaction range
+    public GameObject EToTalk;
+    public bool isInteractable;
+    public Dialogue DAlan1;
+    public Dialogue DAlan2;
+    public Dialogue DAlan3;
 
-    public Item Alan;
-    public GameObject EToInteract;
-    public Dialogue dialogue;
+    void Start()
+    {
+        isInteractable = true;
+        CheckpointManager.Instance.SetCheckpoint("[C]Alan1", true);
+    }
 
     void Update()
     {
-        // Check for interaction input (E key)
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isInteractable)
         {
-            Interact();
+            if (Input.GetKeyDown(KeyCode.E)) 
+            {
+                if (CheckpointManager.Instance.GetCheckpoint("[C]Alan1"))
+                {
+                    DialogueManager.Instance.StartDialogue(DAlan1);
+                    CheckpointManager.Instance.SetCheckpoint("[C]Alan1", false);
+                    isInteractable=false;
+                    EToTalk.SetActive(false);
+                }
+                if (CheckpointManager.Instance.GetCheckpoint("[C]Alan2"))
+                {
+                    DialogueManager.Instance.StartDialogue(DAlan2);
+                    CheckpointManager.Instance.SetCheckpoint("[C]Alan2", false);
+                    isInteractable = false;
+                    EToTalk.SetActive(false);
+                }
+                if (CheckpointManager.Instance.GetCheckpoint("[C]Alan3"))
+                {
+                    DialogueManager.Instance.StartDialogue(DAlan3);
+                    CheckpointManager.Instance.SetCheckpoint("[C]Alan3", false);
+                    isInteractable = false;
+                    EToTalk.SetActive(false);
+                }
+                else { }
+            }
         }
+        else { }
     }
 
-    // Function called when the player interacts with the object
-    void Interact()
-    {
-        Debug.Log("Interacted with object: " + gameObject.name);
-        if (Alan.dialogue != null && DialogueManager.Instance != null)
-        {
-            EToInteract.SetActive(false);
-            Debug.Log("SpectralInteraction");
-            DialogueManager.Instance.StartDialogue(Alan.dialogue);
-            CheckpointManager.Instance.SetCheckpoint("SpectralSense01", true);
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isInteractable)
+        {
+            EToTalk.SetActive(true);
         }
         else
         {
-            Debug.LogWarning("Dialogue or DialogueManager is not set up properly.");
+
         }
     }
 
-    // Function called when another collider enters the trigger collider
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            EToInteract.SetActive(true);
-            isPlayerInRange = true;
-        }
-    }
-
-    // Function called when another collider exits the trigger collider
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            EToInteract.SetActive(false);
-            isPlayerInRange = false;
-        }
+        
     }
+
 }
 

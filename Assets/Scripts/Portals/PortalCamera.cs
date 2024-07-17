@@ -16,7 +16,7 @@ public class PortalCamera : MonoBehaviour
         Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
 
         // Lock the Y position to the portal's Y position
-        playerOffsetFromPortal.y = 0;
+        playerOffsetFromPortal.z = 0;
 
         // Update the camera's position
         Vector3 newPosition = portal.position + playerOffsetFromPortal;
