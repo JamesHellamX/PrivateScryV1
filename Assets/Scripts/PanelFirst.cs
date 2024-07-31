@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PanelFirst : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public bool FirstPanel = false;
+    public Dialogue dialogue;
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.activeSelf && !FirstPanel && CheckpointManager.Instance.GetCheckpoint("SpectralSense01"))
+        {
+            FirstPanel = true;
+            DialogueManager.Instance.StartDialogue(dialogue);
+        }
+        else
+        {
+
+        }
     }
 }

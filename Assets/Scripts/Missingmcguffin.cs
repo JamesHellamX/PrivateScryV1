@@ -4,44 +4,41 @@ using UnityEngine;
 
 public class Missingmcguffin : MonoBehaviour
 {
-    private bool IsInRange = false;
     public GameObject EToInspect;
-    public Item MissingMcguffin;
+    public Dialogue dialogue;
     private bool IsInteractable = true;
+    private bool hasInteracted = false;
 
     void Update()
     {
-        if (IsInteractable)
-        {
-            if (IsInRange)
-            {
-                EToInspect.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Interact();
-                }
-            }
-        }
-        else
-        {
 
-        }
 
     }
 
     private void Interact()
     {
+        DialogueManager.Instance.StartDialogue(dialogue);
         EToInspect.SetActive(false);
-        DialogueManager.Instance.StartDialogue(MissingMcguffin.dialogue);
+        hasInteracted = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        IsInRange = true;
+        if (other.CompareTag("Player") && !hasInteracted)
+        {
+            IsInteractable = true;
+            EToInspect.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
+        }
+        else { }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        IsInRange = false;
+        EToInspect.SetActive(false);
+        IsInteractable = false;
     }
 }

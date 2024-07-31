@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7f3ac2c12886e4794ca891cc190770, type: 3}
   m_Name: '[C]Alan3'
   m_EditorClassIdentifier: 
-  checkpointName: 
+  checkpointName: '[C]Alan3'
   description: 
   isAchieved: 0

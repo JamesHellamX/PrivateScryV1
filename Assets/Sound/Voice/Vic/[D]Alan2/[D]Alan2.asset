@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1715d70138e3b22438b0bb8cb0ab5c0d, type: 3}
+  m_Name: '[D]Alan2'
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: 'Vic: Ok, I''ve had a look around and a few things stand out to me.'
+    audioClip: {fileID: 8300000, guid: 8e7c426689106c54287b719470a81e55, type: 3}
+  - text: 'Alan: Do tell.'
+    audioClip: {fileID: 8300000, guid: 2a6329179c94e144286bec95a005a78d, type: 3}
+  - text: 'Vic: The bathroom. All the self care essentials are gone. Kidnappers would
+      take those with them. She bolted.'
+    audioClip: {fileID: 8300000, guid: 2796ed7cd51087342b4ea8dcfe4a7063, type: 3}
+  - text: 'Alan: And she couldn''t just be out of products?'
+    audioClip: {fileID: 8300000, guid: a53d6fe35fe3ca04d8d1b9ef9f152fda, type: 3}
+  - text: 'Vic: Out of shampoo, toothpaste, moisturiser, body wash and everything
+      else? All at once?'
+    audioClip: {fileID: 8300000, guid: 25c3105720068214687c5dccf50d7aa3, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Vic: Second. Laundry Room. Barely any clothes left in there at all.'
+    audioClip: {fileID: 8300000, guid: 93150dfeb12fff34ab10e1e2753664e7, type: 3}
+  - text: Girls a fashion designer. She should have shirts and skirts all over.
+    audioClip: {fileID: 8300000, guid: aa07e7efd9825644e81caadf285ad46a, type: 3}
+  - text: 'Alan: Alright. Anything else?'
+    audioClip: {fileID: 8300000, guid: d89f73d765b402542896141ccea48953, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: Takeaway in the fridge. Opened, but hasn't been off very long. She's been
+      gone 2 days at the most.
+    audioClip: {fileID: 8300000, guid: 8f021ba32d786224db6c73490d1410f6, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Vic: Last of all, shit ton of books in the bedroom. Vast majority are
+      occult based.'
+    audioClip: {fileID: 8300000, guid: d5904a63ef5fdea48af29e08ddf3d4c5, type: 3}
+  - text: You ask me? Girl got into trouble with some religious types, decided to
+      scamper before anything bad happened.
+    audioClip: {fileID: 8300000, guid: ceaa862a61972c14faaf9816c2a908b5, type: 3}
+  - text: 
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alan: It''s possible. There''s been an uptick of activity in the church
+      region recently.'
+    audioClip: {fileID: 8300000, guid: 02963bd6539528e4bbca53507db98073, type: 3}
+  - text: You almost finished?
+    audioClip: {fileID: 8300000, guid: 386eb3200c492be4887e47448e0b26c1, type: 3}
+  - text: 'Vic: Almost. I''m gonna have a look around with my Spectral Sense. See
+      if there''s anything else I can find.'
+    audioClip: {fileID: 8300000, guid: b6ead3dd9d165a442bcbac8b1951df05, type: 3}
+  - text: 'Alan: Let me know when you''re done.'
+    audioClip: {fileID: 8300000, guid: 99fe50c57a694f6468b6cdd9e36e42b6, type: 3}

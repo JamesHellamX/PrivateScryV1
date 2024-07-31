@@ -34,7 +34,7 @@ public class ActivateInventory : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (SpectralPanel.activeSelf)
             {
@@ -46,7 +46,7 @@ public class ActivateInventory : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             if (Portal_A.activeSelf)
             {

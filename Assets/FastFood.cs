@@ -42,6 +42,7 @@ public class FastFood : MonoBehaviour
         DialogueManager.Instance.StartDialogue(Dialogue);
         isInteractable = false;
         hasInteracted = true;
+        CheckpointManager.Instance.SetCheckpoint("takeaway", true);
         Debug.Log("Interacted with FastFood. isInteractable set to false and hasInteracted set to true.");
     }
 

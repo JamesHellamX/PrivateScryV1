@@ -2,43 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AlanCheckpointManager : MonoBehaviour
+public class AlanCheckpointmanager : MonoBehaviour
 {
-    public AlanDialogue AlanDialogue;
+    // List of checkpoint names to be checked
+    public List<string> requiredCheckpoints = new List<string>();
+    // Name of the checkpoint to activate when all required checkpoints are achieved
+    public string targetCheckpoint;
 
     private void Start()
     {
-        CheckpointManager.Instance.SetCheckpoint("[C]Alan1", true);
+        // Start checking checkpoints
+        StartCoroutine(CheckCheckpoints());
     }
 
-    private void Update()
+    private IEnumerator CheckCheckpoints()
     {
-        CheckAlan1();
-        CheckAlan2();
-    }
-
-    private void CheckAlan1()
-    {
-        if (CheckpointManager.Instance.GetCheckpoint("[C]Alan1") &&
-            CheckpointManager.Instance.GetCheckpoint("[C]LaundryRoom") &&
-            CheckpointManager.Instance.GetCheckpoint("[C]Bookshelf") &&
-            CheckpointManager.Instance.GetCheckpoint("bathroomcupboard") &&
-            CheckpointManager.Instance.GetCheckpoint("takeaway"))
+        while (true)
         {
-            CheckpointManager.Instance.SetCheckpoint("[C]Alan2", true);
-            AlanDialogue.isInteractable = true;
-        }
-    }
+            // Check if all required checkpoints are achieved
+            bool allAchieved = true;
+            foreach (string checkpoint in requiredCheckpoints)
+            {
+                if (!CheckpointManager.Instance.GetCheckpoint(checkpoint))
+                {
+                    allAchieved = false;
+                    break;
+                }
+            }
 
-    private void CheckAlan2()
-    {
-        if (CheckpointManager.Instance.GetCheckpoint("[C]Alan2Comp") &&
-            CheckpointManager.Instance.GetCheckpoint("SpectralSense01") &&
-            CheckpointManager.Instance.GetCheckpoint("PortalKeyAquired") &&
-            CheckpointManager.Instance.GetCheckpoint("SpectralBootprint"))
-        {
-            CheckpointManager.Instance.SetCheckpoint("[C]Alan3", true);
-            AlanDialogue.isInteractable = true;
+            // If all required checkpoints are achieved, activate the target checkpoint
+            if (allAchieved)
+            {
+                CheckpointManager.Instance.SetCheckpoint(targetCheckpoint, true);
+                // Optionally, you can destroy this object if it is no longer needed
+                Destroy(gameObject);
+                // Exit the coroutine
+                yield break;
+            }
+
+            // Wait for a short period before checking again
+            yield return new WaitForSeconds(1f);
         }
     }
 }

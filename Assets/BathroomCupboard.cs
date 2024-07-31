@@ -37,7 +37,7 @@ public class BathroomCupboard : MonoBehaviour
         hasInteracted = true;
         Debug.Log("hasInteracted set to True");
 
-        CheckpointManager.Instance.SetCheckpoint("Bathroomcupboard", true);
+        CheckpointManager.Instance.SetCheckpoint("[C]Bathroomcupboard", true);
         Debug.Log("Checkpoint set to true");
 
         EToInteract.SetActive(false);

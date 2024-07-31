@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1715d70138e3b22438b0bb8cb0ab5c0d, type: 3}
+  m_Name: '[D]Alan1'
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: 'Vic: Hah! They really don''t trust you with the important stuff, do they?'
+    audioClip: {fileID: 8300000, guid: 26a74569a07b53344901534390a3354c, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: 'Alan: Bite my prissy white ass, Sinclair. Just do your job then get out
+      outta my face.'
+    audioClip: {fileID: 8300000, guid: 7dfff321702c9c941904eb6c779e0444, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: 'Vic: Salty as ever then.'
+    audioClip: {fileID: 8300000, guid: 0e924a9793ef48c40974f74b9bc32216, type: 3}
+  - text: Thought sitting on your ass was a favourite passtime.
+    audioClip: {fileID: 8300000, guid: a781ba38173294549a9a31c59d223938, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: 'Alan: Try not to screw this up, Vic. Don''t worry, there''s no kids for
+      you to get killed this time.'
+    audioClip: {fileID: 8300000, guid: a97ba671e872a3d448e28dbb4fa90076, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: 'Vic: You''re really asking for it, you know that?'
+    audioClip: {fileID: 8300000, guid: 504cb4c514232f14ba639984b2d1dc37, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: 'Alan: Go ahead, do it. Always wanted to see how a pair of irons''d look
+      on your wrist.'
+    audioClip: {fileID: 8300000, guid: d777bd6e2fef40b4b995bb034da7075c, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: 'Vic: Flattered Al, but you aren''t my type.'
+    audioClip: {fileID: 8300000, guid: c7d1bfce75eb6684d9d92bf0ee6c2d46, type: 3}

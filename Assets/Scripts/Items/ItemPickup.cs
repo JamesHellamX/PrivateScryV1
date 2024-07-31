@@ -10,9 +10,10 @@ public class ItemPickup : MonoBehaviour
     public float PickupRange = 10f; // Adjust this value based on your desired pickup range
     public PlayerItemRange PR;
     public GameObject CanvasEToPickup;
+    public string hintName; // Field for the hint name
+    public string checkpointtoset; // Field for the checkpoint name to set
 
     private bool isPickedUp = false; // Flag to check if the item has already been picked up
-
 
     void Update()
     {
@@ -30,10 +31,8 @@ public class ItemPickup : MonoBehaviour
                     CanvasEToPickup.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-
                         Pickup();
                         CanvasEToPickup.SetActive(false);
-
                     }
                 }
                 else
@@ -52,7 +51,6 @@ public class ItemPickup : MonoBehaviour
             if (PR != null)
             {
                 PR.ItemPickup();
-
             }
         }
     }
@@ -81,9 +79,27 @@ public class ItemPickup : MonoBehaviour
         // Mark the item as picked up
         isPickedUp = true;
 
+        // Show the hint if it's set
+        if (!string.IsNullOrEmpty(hintName) && HintManager.Instance != null)
+        {
+            HintManager.Instance.ShowHint(hintName);
+        }
+        else
+        {
+            Debug.LogWarning("Hint name or HintManager is not set up properly.");
+        }
+
+        // Set the checkpoint if it's specified
+        if (!string.IsNullOrEmpty(checkpointtoset))
+        {
+            CheckpointManager.Instance.SetCheckpoint(checkpointtoset, true);
+        }
+        else
+        {
+            Debug.LogWarning("Checkpoint to set is not specified.");
+        }
+
         Destroy(gameObject);
     }
-
-
-
 }
+

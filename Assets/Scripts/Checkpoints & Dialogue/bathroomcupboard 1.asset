@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - text: No toothbrush, no toothpaste, nothing.
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 0a01a8b8dacf8684e8f78b3c9743d229, type: 3}
   - text: 
     audioClip: {fileID: 0}
   - text: Kidnappers don't tend to stop and bring supplies.
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f8132dd4c00eb9a45a3ddcd9a0afb56c, type: 3}

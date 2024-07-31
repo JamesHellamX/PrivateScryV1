@@ -20,7 +20,7 @@ public class ifFridgeDoor : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(dialogue);
             hasInteracted = true;
-            CheckpointManager.Instance.SetCheckpoint("takeaway", true);
+            CheckpointManager.Instance.SetCheckpoint("[C]takeaway", true);
         }
         else { }
     }

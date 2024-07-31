@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DTESTHandprintInteract
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Hah, the old "moving painting" trick. Girl clearly had something to hide.
-    audioClip: {fileID: 8300000, guid: e2a190dff02b98b47865945f50539461, type: 3}
+  - text: "Hah, the ol' \"Secret Painting\" trick. A classic, if not a little clich\xE9"
+    audioClip: {fileID: 8300000, guid: e4e4e1d05cf29c042ad7bbb2110e61b8, type: 3}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnterCloset
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: 'Vic: Just a bunch of clothing. Nothing of too much interest.'
-    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
+  - text: Just a closet. Not a whole lot of clothing though.
+    audioClip: {fileID: 8300000, guid: 3b3b04bae90bdb14f9815de6c0bd2989, type: 3}

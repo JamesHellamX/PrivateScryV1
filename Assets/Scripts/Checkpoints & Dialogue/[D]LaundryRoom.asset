@@ -15,8 +15,9 @@ MonoBehaviour:
   dialogueLines:
   - text: Laundryroom. Might be small but it's better than sharing with the whole
       building.
-    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
+    audioClip: {fileID: 8300000, guid: 64d1b32b349848b44a7e6215e994ff87, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
-  - text: Although, suspiciously little clothing in here to wash.
-    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
+  - text: Not a lot in here to wash though. Didn't really see anything in the bedroom
+      for clothes either.
+    audioClip: {fileID: 8300000, guid: ec1c4ae0117ba5d48b0407a5c09fb6f6, type: 3}

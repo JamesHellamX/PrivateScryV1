@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1715d70138e3b22438b0bb8cb0ab5c0d, type: 3}
+  m_Name: '[D]CorpseDialogue'
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: Yeah, that's a corpse alright. Strange though, seems to have been dead
+      less than a day.
+    audioClip: {fileID: 8300000, guid: 780d3bee07cf3ec4b98320f8559c7a36, type: 3}
+  - text: Which doesn't line up. Girls been gone longer than that.
+    audioClip: {fileID: 8300000, guid: c289e09be53131644bc74c4aec616218, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: So what killed the guy? One question after another.
+    audioClip: {fileID: 8300000, guid: 33e2f85106a6c6242a561e6bbf0a1227, type: 3}
+  - text: 
+    audioClip: {fileID: 0}
+  - text: Wait... he's clutching something. What is that?
+    audioClip: {fileID: 8300000, guid: c3e884a68e56ee1439c3abd292d9274a, type: 3}

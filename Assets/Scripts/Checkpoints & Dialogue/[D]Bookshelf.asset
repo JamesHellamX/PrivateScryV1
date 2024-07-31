@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - text: Helluva lot of books here. Read often by the looks of things.
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: e67b88d3c99f05c408975aa0c3a49080, type: 3}
   - text: Surprising amount of occult type stuff too.
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: f2948813032dde546ae0dbaa2f0a385f, type: 3}

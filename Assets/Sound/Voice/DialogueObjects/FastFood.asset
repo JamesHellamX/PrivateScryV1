@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: FastFood
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Takeaway... Apples... Drinks.
-    audioClip: {fileID: 0}
-  - text: Gone off, but not by much.
-    audioClip: {fileID: 0}
+  - text: Apples, drinks, chinese food.
+    audioClip: {fileID: 8300000, guid: 76da0629b26a93e439e3d75fc6af48a0, type: 3}
+  - text: Couple days old at most.
+    audioClip: {fileID: 8300000, guid: 6b6ce1365ecb0b2449a63b373e5540f6, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
   - text: Girl can't have been gone too long.
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 45abd3f4983cc1746879e5f97295c547, type: 3}
