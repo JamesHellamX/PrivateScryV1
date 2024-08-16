@@ -18,11 +18,12 @@ public class AlanDialogue1 : MonoBehaviour
         CheckpointManager.Instance.SetCheckpoint("[C]takeaway", false);
         CheckpointManager.Instance.SetCheckpoint("[C]LaundryRoom", false);
         CheckpointManager.Instance.SetCheckpoint("[C]Bathroomcupboard", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]SpectralSense01", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]SpectralBootprint", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]PortalKeyAquired", false);
+        CheckpointManager.Instance.SetCheckpoint("SpectralSense01", false);
+        CheckpointManager.Instance.SetCheckpoint("SpectralBootprint", false);
+        CheckpointManager.Instance.SetCheckpoint("PortalKeyAquired", false);
         CheckpointManager.Instance.SetCheckpoint("[C]Alan2", false);
         CheckpointManager.Instance.SetCheckpoint("[C]Alan3", false);
+        CheckpointManager.Instance.SetCheckpoint("GoHome", false);
     }
 
     // Update is called once per frame

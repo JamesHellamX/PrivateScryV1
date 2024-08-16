@@ -6,7 +6,7 @@ public class Missingmcguffin : MonoBehaviour
 {
     public GameObject EToInspect;
     public Dialogue dialogue;
-    private bool IsInteractable = true;
+    private bool IsInteractable;
     private bool hasInteracted = false;
 
     void Update()

@@ -15,6 +15,8 @@ MonoBehaviour:
   dialogueLines:
   - text: Victor.
     audioClip: {fileID: 8300000, guid: f7e2400232d073142b776bcb248d567e, type: 3}
+  - text: I'm an Angel.
+    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
   - text: Ugh, what?
     audioClip: {fileID: 8300000, guid: bd130e0304f4c4746a86bbb058f35a54, type: 3}
   - text: 
@@ -22,7 +24,7 @@ MonoBehaviour:
   - text: Must be my imagination...
     audioClip: {fileID: 8300000, guid: c2d67b8d9acadb64195df3dfd7958364, type: 3}
   - text: 
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: e7979f0c84150f546a6abf462b497624, type: 3}
   - text: Victor.
     audioClip: {fileID: 8300000, guid: f7e2400232d073142b776bcb248d567e, type: 3}
   - text: Ok, definitely didn't imagine that one.
