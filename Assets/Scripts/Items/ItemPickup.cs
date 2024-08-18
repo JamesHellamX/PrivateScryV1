@@ -11,7 +11,6 @@ public class ItemPickup : MonoBehaviour
     public PlayerItemRange PR;
     public GameObject CanvasEToPickup;
     public string hintName; // Field for the hint name
-    public string checkpointtoset; // Field for the checkpoint name to set
 
     private bool isPickedUp = false; // Flag to check if the item has already been picked up
 
@@ -69,6 +68,7 @@ public class ItemPickup : MonoBehaviour
             // Play dialogue
             Debug.Log("Pickup1");
             DialogueManager.Instance.StartDialogue(Item.dialogue);
+            CheckpointManager.Instance.SetCheckpoint("PortalKeyAcquired", true);
         }
         else
         {
@@ -87,16 +87,6 @@ public class ItemPickup : MonoBehaviour
         else
         {
             Debug.LogWarning("Hint name or HintManager is not set up properly.");
-        }
-
-        // Set the checkpoint if it's specified
-        if (!string.IsNullOrEmpty(checkpointtoset))
-        {
-            CheckpointManager.Instance.SetCheckpoint(checkpointtoset, true);
-        }
-        else
-        {
-            Debug.LogWarning("Checkpoint to set is not specified.");
         }
 
         Destroy(gameObject);

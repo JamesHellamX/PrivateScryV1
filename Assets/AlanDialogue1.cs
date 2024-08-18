@@ -30,7 +30,8 @@ public class AlanDialogue1 : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isInteractable)
-        {                               
+        {
+            isInteractable = false;
             DialogueManager.Instance.StartDialogue(dialogue);
             AlanDialogue2.SetActive(true);
             EToTalk.SetActive(false);

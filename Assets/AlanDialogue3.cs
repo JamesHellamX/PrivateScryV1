@@ -5,6 +5,7 @@ using UnityEngine;
 public class AlanDialogue3 : MonoBehaviour
 {
     public GameObject EToTalk;
+    public GameObject DoorTeleport;
 
     public Dialogue dialogue;
 
@@ -24,7 +25,10 @@ public class AlanDialogue3 : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(dialogue);
             EToTalk.SetActive(false);
-            Destroy(gameObject);
+            isInteractable = false;
+            DoorTeleport.SetActive(true);
+            StartCoroutine(DelayedDestroy(0.1f)); // Adjust delay time if needed
+
         }
         else { }
     }
@@ -45,6 +49,12 @@ public class AlanDialogue3 : MonoBehaviour
     {
         EToTalk.SetActive(false);
         isInteractable = false;
+    }
+
+    private IEnumerator DelayedDestroy(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
 }
 

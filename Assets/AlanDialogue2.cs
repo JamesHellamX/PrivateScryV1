@@ -20,6 +20,7 @@ public class AlanDialogue2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isInteractable)
         {
+            isInteractable=false;
             // Start the dialogue
             DialogueManager.Instance.StartDialogue(dialogue);
 
@@ -31,6 +32,10 @@ public class AlanDialogue2 : MonoBehaviour
 
             // Show the hint
             HintManager.Instance.ShowHint("SpectralSense01");
+
+            CheckpointManager.Instance.SetCheckpoint("[C]Alan2", false);
+
+            isInteractable = false;
 
             // Start the coroutine to delay destruction
             StartCoroutine(DelayedDestroy(0.1f)); // Adjust delay time if needed

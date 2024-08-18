@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Add this for scene management
-using UnityEngine.UI; // Add this for UI management
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Sleeptime : MonoBehaviour
 {
@@ -10,20 +9,20 @@ public class Sleeptime : MonoBehaviour
     public GameObject PlayerCamera;
     public Dialogue dialogue;
     public bool isInteractable = false;
-    public float dialogueDuration = 5f; // Estimate or set the dialogue duration
+    public float dialogueDuration = 5f; // Estimated dialogue duration
+    public float waitforfade = 5f; // Duration for the fade effect
+
     public GameObject uiPanel; // Reference to the UI panel
     public float fadeDuration = 1f; // Duration for fade effect
 
-    // Update is called once per frame
     void Update()
     {
         if (isInteractable && Input.GetKeyDown(KeyCode.E))
         {
-            // Instead of deactivating the camera, we activate the UI panel
+            // Activate the UI panel for the fade effect
             uiPanel.SetActive(true);
-            StartCoroutine(FadeInPanel());
-            DialogueManager.Instance.StartDialogue(dialogue);
-            StartCoroutine(WaitForDialogueToFinish());
+            // Start the sequence: first fade in, then dialogue, then scene change
+            StartCoroutine(StartSequence());
         }
     }
 
@@ -42,12 +41,16 @@ public class Sleeptime : MonoBehaviour
         isInteractable = false;
     }
 
-    private IEnumerator WaitForDialogueToFinish()
+    private IEnumerator StartSequence()
     {
-        // Wait for the estimated duration of the dialogue
+        // First, wait for the fade effect to finish
+        yield return StartCoroutine(FadeInPanel());
+        // After the fade, start the dialogue
+        DialogueManager.Instance.StartDialogue(dialogue);
+        // Then, wait for the dialogue to finish
         yield return new WaitForSeconds(dialogueDuration);
-        // Change the scene to the main menu
-        SceneManager.LoadScene("MainMenu"); // Change "MainMenu" to the name of your main menu scene
+        // Finally, change the scene to the main menu
+        SceneManager.LoadScene("MainMenu"); // Replace "MainMenu" with the actual scene name
     }
 
     private IEnumerator FadeInPanel()
@@ -69,5 +72,6 @@ public class Sleeptime : MonoBehaviour
         canvasGroup.alpha = 1f;
     }
 }
+
 
 

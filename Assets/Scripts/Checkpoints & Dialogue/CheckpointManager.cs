@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ public class CheckpointManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -41,6 +42,11 @@ public class CheckpointManager : MonoBehaviour
     {
         Checkpoint checkpoint = checkpoints.Find(c => c.checkpointName == checkpointName);
         return checkpoint != null && checkpoint.isAchieved;
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("CheckpointManager is being destroyed by " + gameObject.name);
     }
 }
 

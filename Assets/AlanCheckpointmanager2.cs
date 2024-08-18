@@ -35,7 +35,7 @@ public class AlanCheckpointmanager2 : MonoBehaviour
             {
                 CheckpointManager.Instance.SetCheckpoint(targetCheckpoint, true);
                 // Optionally, you can destroy this object if it is no longer needed
-                Destroy(gameObject);
+                //Destroy(gameObject);
                 // Exit the coroutine
                 yield break;
             }

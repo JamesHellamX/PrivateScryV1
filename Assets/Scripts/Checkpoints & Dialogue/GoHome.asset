@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointName: GoHome
   description: 
-  isAchieved: 0
+  isAchieved: 1
