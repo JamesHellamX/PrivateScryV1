@@ -19,28 +19,27 @@ public class AlanCheckpointmanager2 : MonoBehaviour
     {
         while (true)
         {
-            // Check if all required checkpoints are achieved
             bool allAchieved = true;
             foreach (string checkpoint in requiredCheckpoints)
             {
-                if (!CheckpointManager.Instance.GetCheckpoint(checkpoint))
+                bool isCheckpointSet = CheckpointManager.Instance.GetCheckpoint(checkpoint);
+                Debug.Log($"Checkpoint '{checkpoint}' achieved: {isCheckpointSet}");
+
+                if (!isCheckpointSet)
                 {
                     allAchieved = false;
                     break;
                 }
             }
 
-            // If all required checkpoints are achieved, activate the target checkpoint
             if (allAchieved)
             {
+                Debug.Log($"All required checkpoints achieved. Setting target checkpoint: {targetCheckpoint}");
+                CheckpointManager.Instance.SetCheckpoint("[C]Alan2", true);
                 CheckpointManager.Instance.SetCheckpoint(targetCheckpoint, true);
-                // Optionally, you can destroy this object if it is no longer needed
-                //Destroy(gameObject);
-                // Exit the coroutine
                 yield break;
             }
 
-            // Wait for a short period before checking again
             yield return new WaitForSeconds(1f);
         }
     }

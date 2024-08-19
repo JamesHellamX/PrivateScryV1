@@ -17,7 +17,7 @@ public class FastFood : MonoBehaviour
             EToInteract.SetActive(false); // Ensure the EToInteract prompt is initially inactive
         }
 
-        Debug.Log("Initial isInteractable: " + isInteractable);
+        //Debug.Log("Initial isInteractable: " + isInteractable);
     }
 
     private void Update()
@@ -43,25 +43,25 @@ public class FastFood : MonoBehaviour
         isInteractable = false;
         hasInteracted = true;
         CheckpointManager.Instance.SetCheckpoint("takeaway", true);
-        Debug.Log("Interacted with FastFood. isInteractable set to false and hasInteracted set to true.");
+        //Debug.Log("Interacted with FastFood. isInteractable set to false and hasInteracted set to true.");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered trigger zone.");
+            //Debug.Log("Player entered trigger zone.");
             if (isInteractable && !hasInteracted)
             {
                 if (EToInteract != null)
                 {
                     EToInteract.SetActive(true);
                 }
-                Debug.Log("EToInteract set to active.");
+                //Debug.Log("EToInteract set to active.");
             }
             else
             {
-                Debug.Log("isInteractable is false or already interacted.");
+                //Debug.Log("isInteractable is false or already interacted.");
             }
         }
     }
@@ -70,7 +70,7 @@ public class FastFood : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player left trigger zone.");
+            //Debug.Log("Player left trigger zone.");
             if (EToInteract != null)
             {
                 EToInteract.SetActive(false);

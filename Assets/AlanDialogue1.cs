@@ -14,16 +14,7 @@ public class AlanDialogue1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CheckpointManager.Instance.SetCheckpoint("[C]Bookshelf", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]takeaway", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]LaundryRoom", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]Bathroomcupboard", false);
-        CheckpointManager.Instance.SetCheckpoint("SpectralSense01", false);
-        CheckpointManager.Instance.SetCheckpoint("SpectralBootprint", false);
-        CheckpointManager.Instance.SetCheckpoint("PortalKeyAquired", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]Alan2", false);
-        CheckpointManager.Instance.SetCheckpoint("[C]Alan3", false);
-        CheckpointManager.Instance.SetCheckpoint("GoHome", false);
+
     }
 
     // Update is called once per frame
@@ -31,7 +22,6 @@ public class AlanDialogue1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isInteractable)
         {
-            isInteractable = false;
             DialogueManager.Instance.StartDialogue(dialogue);
             AlanDialogue2.SetActive(true);
             EToTalk.SetActive(false);

@@ -18,7 +18,7 @@ public class Bookshelf : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Interact();
-                    Debug.Log("Interacting");
+                    //Debug.Log("Interacting");
                 }
             }
         }
@@ -28,16 +28,16 @@ public class Bookshelf : MonoBehaviour
     public void Interact()
     {
         DialogueManager.Instance.StartDialogue(dialogue);
-        Debug.Log("Starting Dialogue");
+        //Debug.Log("Starting Dialogue");
 
         hasInteracted = true;
-        Debug.Log("hasInteracted set to True");
+        //Debug.Log("hasInteracted set to True");
 
         CheckpointManager.Instance.SetCheckpoint("[C]Bookshelf", true);
-        Debug.Log("Checkpoint set to true");
+        //Debug.Log("Checkpoint set to true");
 
         EToInteract.SetActive(false);
-        Debug.Log("Interaction successful. EToInteract set to False");
+        //Debug.Log("Interaction successful. EToInteract set to False");
 
     }
 
@@ -48,10 +48,10 @@ public class Bookshelf : MonoBehaviour
             if (!hasInteracted)
             {
                 EToInteract.SetActive(true);
-                Debug.Log("EToInteract set to visible");
+                //Debug.Log("EToInteract set to visible");
 
                 isInteractable = true;
-                Debug.Log("isInteractable set to true");
+                //Debug.Log("isInteractable set to true");
             }
         }
     }
@@ -62,10 +62,10 @@ public class Bookshelf : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             EToInteract.SetActive(false);
-            Debug.Log("EToInteract set to invisible");
+            //Debug.Log("EToInteract set to invisible");
 
             isInteractable = false;
-            Debug.Log("isInteractable set to False");
+            //Debug.Log("isInteractable set to False");
         }
     }
 }

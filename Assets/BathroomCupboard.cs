@@ -18,12 +18,10 @@ public class BathroomCupboard : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Interact();
-                    Debug.Log("Interacting");
                 }
             }
             else
             {
-                Debug.Log("Warning: isInteractable has returned as true, but hasInteracted has also returned as true. This should not be possible.");
             }
         }
         else { }
@@ -32,16 +30,12 @@ public class BathroomCupboard : MonoBehaviour
     public void Interact()
     {
         DialogueManager.Instance.StartDialogue(dialogue);
-        Debug.Log("Starting Dialogue");
 
         hasInteracted = true;
-        Debug.Log("hasInteracted set to True");
 
         CheckpointManager.Instance.SetCheckpoint("[C]Bathroomcupboard", true);
-        Debug.Log("Checkpoint set to true");
 
         EToInteract.SetActive(false);
-        Debug.Log("Interaction successful. EToInteract set to False");
 
     }
 
@@ -52,10 +46,8 @@ public class BathroomCupboard : MonoBehaviour
             if (!hasInteracted)
             {
                 EToInteract.SetActive(true);
-                Debug.Log("EToInteract set to visible");
 
                 isInteractable = true;
-                Debug.Log("isInteractable set to true");
             }
         }
     }
@@ -66,10 +58,8 @@ public class BathroomCupboard : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             EToInteract.SetActive(false);
-            Debug.Log("EToInteract set to invisible");
 
             isInteractable = false;
-            Debug.Log("isInteractable set to False");
         }
     }
 }

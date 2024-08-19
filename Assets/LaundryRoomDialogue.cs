@@ -18,12 +18,12 @@ public class LaundryRoomDialogue : MonoBehaviour
         if (isInteractable)
         {
             DialogueManager.Instance.StartDialogue(dialogue);
-            Debug.Log("Starting Dialogue");
+            //Debug.Log("Starting Dialogue");
 
             CheckpointManager.Instance.SetCheckpoint("[C]LaundryRoom", true);
 
             isInteractable = false;
-            Debug.Log("hasInteracted set to True");
+            //Debug.Log("hasInteracted set to True");
         }
             if (!isInteractable)
         {

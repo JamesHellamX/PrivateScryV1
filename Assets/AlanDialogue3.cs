@@ -25,7 +25,6 @@ public class AlanDialogue3 : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(dialogue);
             EToTalk.SetActive(false);
-            isInteractable = false;
             DoorTeleport.SetActive(true);
             StartCoroutine(DelayedDestroy(0.1f)); // Adjust delay time if needed
 

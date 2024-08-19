@@ -10,6 +10,7 @@ public class GlowingOrbInteraction : MonoBehaviour
     public Material glowMaterial; // Material to use for glowing effect
     public Material defaultMaterial; // Default material of the object
     public AudioSource glowSound;
+    public GameObject DoorTeleport;
 
     private bool isPlayerInRange = false;
     private bool hasInteracted = false; // Flag to prevent re-interaction
@@ -43,6 +44,7 @@ public class GlowingOrbInteraction : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(dialogue);
             StartCoroutine(WaitForDialogueEnd());
+            DoorTeleport.SetActive(true);
         }
         else
         {

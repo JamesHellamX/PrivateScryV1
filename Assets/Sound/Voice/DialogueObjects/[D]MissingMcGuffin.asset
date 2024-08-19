@@ -20,7 +20,3 @@ MonoBehaviour:
   - text: Since the portal was closed, I'm willing to guess it wasn't whoever wrecked
       the apartment after the fact.
     audioClip: {fileID: 8300000, guid: a8e4cbe6950a0e94fb123955e6e7909e, type: 3}
-  - text: 
-    audioClip: {fileID: 0}
-  - text: I should probably inspect the body, then get back to Alan.
-    audioClip: {fileID: 8300000, guid: e6cf92a0bb1ada2489bd47854491118b, type: 3}

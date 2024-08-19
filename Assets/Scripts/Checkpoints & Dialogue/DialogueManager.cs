@@ -37,22 +37,34 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, GameObject gameObjectToDestroy = null)
     {
-        Debug.Log("Starting dialogue...");
+        // If a dialogue is already playing, end it before starting a new one
+        if (isDialoguePlaying)
+        {
+            EndDialogue();
+        }
+
+        // Activate the dialogue panel
         dialoguePanel.SetActive(true);
+
+        // Clear any existing dialogue lines to prepare for the new dialogue
         dialogueLines.Clear();
 
+        // Enqueue the new dialogue lines
         foreach (Dialogue.DialogueLine line in dialogue.dialogueLines)
         {
             dialogueLines.Enqueue(line);
         }
 
+        // Mark dialogue as playing
         isDialoguePlaying = true;
 
+        // Add the GameObject to be destroyed after the dialogue ends (if provided)
         if (gameObjectToDestroy != null)
         {
             objectsToDestroy.Add(gameObjectToDestroy);
         }
 
+        // Start displaying the next line of dialogue
         DisplayNextLine();
     }
 
@@ -81,29 +93,33 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in line.text.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null; // Change this line if you want a typing effect, e.g., `yield return new WaitForSeconds(typingSpeed);`
+            yield return null; // Change this line for the typing effect, e.g., `yield return new WaitForSeconds(typingSpeed);`
         }
 
         yield return new WaitWhile(() => audioSource.isPlaying);
         DisplayNextLine();
     }
 
-    private void EndDialogue()
+    public void EndDialogue()
     {
-        Debug.Log("Ending dialogue...");
+        // Clear the dialogue queue and reset UI elements
+        dialogueLines.Clear();
+        dialogueText.text = "";
+
+        // Hide the dialogue panel
         dialoguePanel.SetActive(false);
+
+        // Set the dialogue playing flag to false
         isDialoguePlaying = false;
 
-        // Destroy the objects if specified
-        foreach (var obj in objectsToDestroy)
+        // Destroy any objects that were set to be destroyed after the dialogue
+        foreach (GameObject obj in objectsToDestroy)
         {
             if (obj != null)
             {
                 Destroy(obj);
-                Debug.Log("Destroyed object: " + obj.name);
             }
         }
-
         objectsToDestroy.Clear();
     }
 

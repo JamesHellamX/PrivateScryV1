@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CursorLockScript : MonoBehaviour
@@ -15,8 +14,8 @@ public class CursorLockScript : MonoBehaviour
 
     void Start()
     {
-        LockCursor();
         scriptsToDisable = new MonoBehaviour[] { playerLookScript, playerMovementScript };
+        LockCursor();
     }
 
     void Update()
@@ -28,21 +27,49 @@ public class CursorLockScript : MonoBehaviour
             LockCursor();
         }
 
-        // Check if any of the designated UI elements are active, and if so, show the cursor, set game time scale to 0, and deactivate the PlayerLook and PlayerMovement scripts
+        HandleUIElementsAndCursor();
+    }
+
+    private void HandleUIElementsAndCursor()
+    {
+        // Check if any UI elements are active
+        bool anyUIElementActive = false;
         foreach (GameObject element in cursorVisibleElements)
         {
             if (element.activeSelf)
             {
-                Cursor.visible = true;
-                DisableScripts();
-                return; // Exit the loop early if any UI element is active
+                anyUIElementActive = true;
+                break;
             }
         }
 
-        // If no designated UI elements are active, hide the cursor, unlock it, resume game time scale, and activate the PlayerLook and PlayerMovement scripts
-        Cursor.visible = false;
-        LockCursor();
-        EnableScripts();
+        if (anyUIElementActive)
+        {
+            // If any UI element is active, unlock the cursor and disable gameplay scripts
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            DisableScripts();
+            Time.timeScale = 0f; // Pause the game
+        }
+        else
+        {
+            if (cursorLocked)
+            {
+                // If the cursor should be locked for gameplay
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                EnableScripts();
+                Time.timeScale = 1f; // Resume the game
+            }
+            else
+            {
+                // If the cursor should be unlocked for non-gameplay actions
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                DisableScripts();
+                Time.timeScale = 1f; // Keep the game running
+            }
+        }
     }
 
     void LockCursor()
@@ -50,10 +77,16 @@ public class CursorLockScript : MonoBehaviour
         if (cursorLocked)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            EnableScripts();
+            Time.timeScale = 1f; // Resume the game when locking the cursor
         }
         else
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            DisableScripts();
+            Time.timeScale = 1f; // Ensure the game is not paused by unlocking the cursor
         }
     }
 

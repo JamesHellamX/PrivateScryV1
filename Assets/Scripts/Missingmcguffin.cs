@@ -11,8 +11,14 @@ public class Missingmcguffin : MonoBehaviour
 
     void Update()
     {
+        if (IsInteractable && Input.GetKeyDown(KeyCode.E))
+        {
+            Interact();
+        }
+        else
+        {
 
-
+        }
     }
 
     private void Interact()
@@ -28,12 +34,7 @@ public class Missingmcguffin : MonoBehaviour
         {
             IsInteractable = true;
             EToInspect.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Interact();
-            }
         }
-        else { }
     }
 
     private void OnTriggerExit(Collider other)

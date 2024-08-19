@@ -53,7 +53,7 @@ public class OptionsMenu : MonoBehaviour
         Resolution resolution = filteredResolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, true);
     }
-    public void SetMusicVol (float musicvol)
+    public void SetMusicVol(float musicvol)
     {
         audioMixer.SetFloat("MusicVolume", musicvol);
     }
@@ -73,12 +73,12 @@ public class OptionsMenu : MonoBehaviour
         audioMixer.SetFloat("MasterVolume", mastervol);
     }
 
-    public void SetQuality (int qualityindex)
+    public void SetQuality(int qualityindex)
     {
         QualitySettings.SetQualityLevel(qualityindex);
     }
 
-    public void SetFullscreen (bool isFullscreen)
+    public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }

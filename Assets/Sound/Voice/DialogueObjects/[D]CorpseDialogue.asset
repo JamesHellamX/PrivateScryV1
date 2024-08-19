@@ -20,7 +20,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: c289e09be53131644bc74c4aec616218, type: 3}
   - text: 
     audioClip: {fileID: 0}
-  - text: So what killed the guy? One question after another.
+  - text: SSo what killed the guy? One question after another.
     audioClip: {fileID: 8300000, guid: 33e2f85106a6c6242a561e6bbf0a1227, type: 3}
   - text: 
     audioClip: {fileID: 0}

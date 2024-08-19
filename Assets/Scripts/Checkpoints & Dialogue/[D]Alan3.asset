@@ -14,46 +14,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - text: 'Vic: Not entirely sure how to describe what I''m seeing, Al.'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: 1f3b5d74e0a37ad48af49e9fa0ea7d59, type: 3}
   - text: 'Alan: Well, spit it out.'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: 479cd964139d25e499d21a34c9e9447b, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
   - text: 'Vic: There''s... some kinda portal hidden in the laundry room. Found a
-      key that tuned it on.'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+      key that turned it on.'
+    audioClip: {fileID: 8300000, guid: fdfa1fa4c747efb4b973bdf3b72818ca, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
-  - text: A... portal. Sure. And what was on the other side?
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Alan: A... portal. Sure. And what was on the other side?'
+    audioClip: {fileID: 8300000, guid: e77280bafe572924eb2bdaaacf50cbd8, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
-  - text: A room. Looked like some kinda shrine. Definately occult. There's a body
-      in there too, Al.
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+  - text: 'Vic: A room. Looked like some kinda shrine. Definitely occult. There''s
+      a body in there too, Al.'
+    audioClip: {fileID: 8300000, guid: aa01fdf3b1d583344a663630dce0d83d, type: 3}
   - text: 'Alan: A body?! Is it the girl?'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
-  - text: No, some random human. Not a hate crime, sorry.
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: e1e5343e9394cd948878274c0d65cf36, type: 3}
+  - text: 'Vic: No, some random human. Not a hate crime, sorry.'
+    audioClip: {fileID: 8300000, guid: a4fb86edbaea44d42aa6599120ac1bf0, type: 3}
   - text: 'Alan: You find anything else?'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
-  - text: 
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: 79f23691cfdbaf54d806f9e58df5d418, type: 3}
   - text: 'Voice: Don''t tell him. Don''t mention the artefact.'
+    audioClip: {fileID: 8300000, guid: 8cba306dc1b6efd4a89d434c3131c66e, type: 3}
+  - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
   - text: 'Vic: Uh... no. Nothing on the corpse.'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: 15963d3c02fa8384c8ad3c348f0343c8, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
   - text: 'Alan: Well then, this is turning into a whole lotta bullshit. Can''t believe
-      theres an actual portal. That kinda thing aint exactly common.'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+      there''s an actual portal. That kinda thing ain''t exactly common.'
+    audioClip: {fileID: 8300000, guid: e7863375e5078464ba438604e78a2320, type: 3}
   - text: 'Vic: Yeah, you''re telling me. I''m gonna head out. Call you if I find
       anything else.'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: c84806553fb3ad64ea03169caab5b3f0, type: 3}
   - text: 'Alan: You''re taking the case, then?'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: 50b1184402068fe4289ce8d831f11c94, type: 3}
   - text: 
     audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
   - text: 'Vic: Yeah. Guess so. See you, Al.'
-    audioClip: {fileID: 8300000, guid: 63de2fedb2fadf340969f43c081462f1, type: 3}
+    audioClip: {fileID: 8300000, guid: 4e35b4f20823d3c459e569d87c1825de, type: 3}
